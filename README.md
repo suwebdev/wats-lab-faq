@@ -1,1 +1,4 @@
-This file serves as an introduction to your Knowledge Base, it is displayed on the homepage of your website. Use it to provide more context to your visitors.
+## How to ...
+
+This collection of FAQ's serve to help a student accomplish tasks needed to develop web sites.
+
