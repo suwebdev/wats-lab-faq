@@ -65,6 +65,14 @@ The command below adds your key to the ssh agent.  If the name of your key is di
 
 `ssh-add ~/.ssh/id_rsa`
 
+Add the SSH Key to you Github Acccount
+
+Now you need to add the public key to your Github account.  This will allow Github to decrypt the data you send it via SSH.
+
+We start by using the clip command to copy the content of the public key SSH file to your local buffer.
+
+clip &lt; ~/.ssh/id\_rsa.pub
+
 
 
 [https://help.github.com/articles/connecting-to-github-with-ssh/](https://help.github.com/articles/connecting-to-github-with-ssh/)
