@@ -53,7 +53,19 @@ Finally, you'll be prompted to enter a passphrase.  This is a security feature a
 
 # Start SSH Agent and Add Keys
 
-The SSH Agent is a process that will allow you to connect via SSH to Github.  You'll start that process and add your keys with the following commands.
+The SSH Agent is a process that will allow you to manage SSH Keys.  You'll start that process and add your keys with the following command.
+
+`eval $(ssh-agent -s)`
+
+You will see a response like this indicate that the process is running.
+
+`Agent pid 59566`
+
+The command below adds your key to the ssh agent.  If the name of your key is different replace `id_rsa` with the name of your key.
+
+`ssh-add ~/.ssh/id_rsa`
+
+
 
 [https://help.github.com/articles/connecting-to-github-with-ssh/](https://help.github.com/articles/connecting-to-github-with-ssh/)
 
