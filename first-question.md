@@ -91,9 +91,7 @@ Click on the Green button to add the key you have in you buffer.  You should see
 
 ![](/assets/ssh-key-add-2.PNG)
 
-Additional References
+#### Additional References
 
 [https://help.github.com/articles/connecting-to-github-with-ssh/](https://help.github.com/articles/connecting-to-github-with-ssh/)
-
-
 
