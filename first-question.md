@@ -24,7 +24,7 @@ Check to see if you already have a private key/public key setup by listing any f
 
 `ls -al ~/.ssh`
 
-If you don't see any of the following files you will need to generate these key file
+If you don't see any of the following files you will need to create  the key files
 
 * id\_rsa.pub
 * id\_dsa.pub
