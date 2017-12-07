@@ -4,7 +4,7 @@
 * [Install Git Locally](first-question.md)
 * [Install Visual Studio Code](second-question.md)
 * [Install OmniDB SQL Client](install-omnidb-sql-client.md)
-* [Use Markdown](use-markdown.md)
+* [Write Markdown](use-markdown.md)
 * [Connect to Cloud 9 \(c9.io\) Interactive Development Environment](connect-to-cloud-9-c9io-interactive-development-environment.md)
 * [Add existing local folder to Github](add-existing-local-folder-to-github.md)
 
