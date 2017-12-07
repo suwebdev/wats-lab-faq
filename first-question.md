@@ -1,4 +1,4 @@
-This is the answer to "How to install Git locally?".
+**This is the answer to "How to install Git locally?"**
 
 Before you start this process, create an account on Github at[ ](https://github.com/)[https://github.com/](https://github.com/).
 
@@ -75,7 +75,7 @@ We start by using the `clip` command to copy the content of the public key SSH f
 
 You can also open the file with a text editor and copy the content into the buffer if you have trouble with the `clip` command.
 
-Next, go to your Github account online and click on your photo.  This will reveal a dropdown selection where you should select **Settings**.  
+Next, go to your Github account online and click on your photo.  This will reveal a dropdown selection where you should select **Settings**.
 
 ![](/assets/settings-github.PNG)
 
