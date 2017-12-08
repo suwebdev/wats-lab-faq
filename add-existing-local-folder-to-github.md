@@ -1,3 +1,5 @@
+**This is the answer to "How to install create new Github repo from existing file folder?"**
+
 # **New repository from existing local folder**
 
 This assumes you have installed Git locally.
