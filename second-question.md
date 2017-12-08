@@ -18,13 +18,21 @@ Live-Server will serve up web pages from your VS Code project to your default br
 
 Click on the Extensions icon located at the bottom of the left nav bar in the VS Code Application.
 
-&lt;pic&gt;
+![](/assets/ext-icon.PNG)
 
-Search for 'Live-Server' and click on the Green Install button.  After the Extension is loaded, click on the Blue Reload button to complete the installation.
+Search for 'Live-Server' and click on the Green Install button.  
 
-&lt;pic&gt;
+![](/assets/live-server-install.PNG)
 
-Now you should see a **Go Live** button in the bottom status bar.  When you click on that, Live-Server will start and serve your **index.html**  file by default.  Once the server has been started, the **Go Live** button will change to  **Port: 5500** which indicates that the server is running.  When you save changes in files that are being served, the server will automatically reserve the files.  This will ensure that your browser is always running the latest saved changes.
+After the Extension is loaded, click on the Blue Reload button to complete the installation.
+
+![](/assets/live-server-reload.PNG)
+
+Now you should see a **Go Live** button in the bottom status bar.  When you click on that, Live-Server will start and serve your **index.html**  file by default. 
+
+![](/assets/go-live.PNG)Once the server has been started, the **Go Live **button will change to **Port: 5500 **which indicates that the server is running. The Go Live and Port:5500 buttons operate as a toggle. When you save changes in files that are being served, the server will automatically reserve the files. This will ensure that your browser is always running the latest saved changes.
+
+![](/assets/go-live-port.PNG)
 
 # User Settings
 
