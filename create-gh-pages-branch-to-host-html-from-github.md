@@ -6,9 +6,9 @@ Github will host the web pages that you create in your Repos.  One way to set up
 
 `https://<account name>.github.io/<repo name>`
 
-For example if my account name is `janeblow` and my repo name is `wats3010-hello-world` , and I have created a gh-pages branch on my repo, I will find the index.html located in the root of the repo served up at this URL:
+For example if my account name is `janedev` and my repo name is `wats3010-hello-world` , and I have created a gh-pages branch on my repo, I will find the index.html located in the root of the repo served up at this URL:
 
-`https://janeblow.github.io/wats3010-hello-world`
+`https://janedev.github.io/wats3010-hello-world`
 
 If you have created a gh-pages branch, but are unsure where it is hosted you can click on the Settings tab on the main page of your repo and then scroll down to find the link to the hosted web pages.
 
@@ -16,7 +16,7 @@ If you have created a gh-pages branch, but are unsure where it is hosted you can
 
 # Commands to create gh-pages
 
-When you start working on a new repo you will be in the master branch. 
+When you start working on a new repo you will be in the master branch.
 
 From a bash terminal \(git bash on Window or terminal on Mac\)
 
@@ -51,6 +51,4 @@ If you are returning to work on code in a repo that you have worked on before, y
 If the status indicates that you are already on gh-pages, you don't have to do anything.  If you're on master, you can checkout gh-pages. Notice we don't need the -b when we are not creating a new gh-pages branch.
 
 `git checkout gh-pages`
-
-
 
