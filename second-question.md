@@ -34,7 +34,7 @@ VS Code allows you to customize settings for all projects \(User Settings\) or f
 
 To change a default setting find the setting on the left and then copy it to the right with your desired setting.  For example, if you don't want to see the minimap on the right hand side of the application, you can make the following entry in the file on the right.
 
-&lt;
+&lt;gif showing how to change settings&gt;
 
 `{`
 
