@@ -42,7 +42,7 @@ Next run push -u origin to update Github which is a remote location.  Specifiy g
 
 `git push -u origin gh-pages:gh-pages`
 
-# Commands to work on gh-pages branch
+# Commands to continue work on gh-pages branch
 
 If you are returning to work on code in a repo that you have worked on before, you will not need to run checkout -b because you don't want to create a new branch, you just want to access the existing branch.  Start with getting status.
 
