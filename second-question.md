@@ -30,13 +30,15 @@ Now you should see a **Go Live** button in the bottom status bar.  When you clic
 
 VS Code allows you to customize settings for all projects \(User Settings\) or for a single project \(Workspace settings\).  To modify default settings select Code \| Preference for the Mac or File \| Preferences for Windows.  You will see to files side by side.  On the left are the default settings and on the right are the User setting overrides.
 
+&lt;pic&gt;
+
 To change a default setting find the setting on the left and then copy it to the right with your desired setting.  For example, if you don't want to see the minimap on the right hand side of the application, you can make the following entry in the file on the right.
+
+&lt;
 
 `{`
 
-`    "editor.minimap.enabled":false`
+`"editor.minimap.enabled":false`
 
 `}`
-
-
 
