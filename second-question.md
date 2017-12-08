@@ -1,4 +1,4 @@
-This is the answer to "How to set up Dev environment with Visual Studio Code?".
+**This is the answer to "How to set up Dev environment with Visual Studio Code?".**
 
 # Install Visual Studio Code
 
