@@ -48,7 +48,7 @@ If you are returning to work on code in a repo that you have worked on before, y
 
 `git status`
 
-If the status indicates that you are already on gh-pages, you don't have to do anything.  If you're on master, you can checkout gh-pages. Notice we don't need the -b when we are not creating a new gh-pages branch.
+If the status indicates that you are already on gh-pages, you don't have to do anything.  If you're on master, you can checkout gh-pages. Notice **we don't need the -b** when we are not creating a new gh-pages branch.
 
 `git checkout gh-pages`
 
