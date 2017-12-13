@@ -7,4 +7,5 @@
 * [Create gh-pages branch for Github hosting](create-gh-pages-branch-to-host-html-from-github.md)
 * [Use the Visual Studio Code Terminal](use-the-visual-studio-code-terminal.md)
 * [Kill a process based on port number](kill-a-process-based-on-port-number.md)
+* [Validate HTML and CSS](validate-html-and-css.md)
 
