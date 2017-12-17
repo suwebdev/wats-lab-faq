@@ -25,11 +25,10 @@ Follow instructions below substituting your account name and the repo you create
 `git init`
 
 ```
-git remote add origin
+git remote add origin git@github.com:<account name>/<exisisting remote repo>.git
 ```
 
 ```
-git@github.com:<account name>/<exisisting remote repo>.git
 git push -u origin master
 ```
 
