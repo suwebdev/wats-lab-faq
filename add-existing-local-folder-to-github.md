@@ -36,7 +36,9 @@ git push -u origin master
 
 `git commit -m"first commit"`
 
+If you added a license or Readme while setting up the new repository you will need to "pull" before "pushing"
+
+`git pull origin master --allow-unrelated-histories`
+
 `git push --set-upstream origin master`
-
-
 
