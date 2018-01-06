@@ -6,7 +6,7 @@ This assumes you have installed Git locally.
 
 **Online**:
 
-Go to you github account [https://github.com/&lt;account name&gt;](https://github.com)
+Go to your github account [https://github.com/&lt;account name&gt;](https://github.com)
 
 In the upper-right corner of any page, click the "+" icon and choose to 'New Repository'
 
