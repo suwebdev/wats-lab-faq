@@ -32,5 +32,11 @@ git remote add origin git@github.com:<account name>/<exisisting remote repo>.git
 git push -u origin master
 ```
 
+`git add .`
+
+`git commit -m"first commit"`
+
+`git push --set-upstream origin master`
+
 
 
