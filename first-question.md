@@ -73,6 +73,10 @@ We start by using the `clip` command to copy the content of the public key SSH f
 
 `clip < ~/.ssh/id_rsa.pub`
 
+If the `clip` command is not installed you can list the file to the console and then copy the contents into your buffer with ctrl-c/cmd-c.  The `cat` command will list the file to the console.
+
+`cat ~/.ssh/id_rsa.pub`
+
 You can also open the file with a text editor and copy the content into the buffer if you have trouble with the `clip` command.
 
 Next, go to your Github account online and click on your photo.  This will reveal a dropdown selection where you should select **Settings**.
