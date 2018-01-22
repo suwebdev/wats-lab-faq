@@ -12,7 +12,7 @@ For example if my account name is `janedev` and my repo name is `wats3010-hello-
 
 If you have created a gh-pages branch, but are unsure where it is hosted you can click on the Settings tab on the main page of your repo and then scroll down to find the link to the hosted web pages.
 
-&lt;pic&gt;
+![](/assets/gh-pages-settings.JPG)
 
 # Commands to create gh-pages
 
