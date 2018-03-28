@@ -1,4 +1,4 @@
-**This answers the question "How to setup SSH?"**
+**This answers the question "How to setup SSH on a client \(local machine\)?"**
 
 SSH is the acronym for "Secure Shell".  An SSH connection allows you to connects one node\(machine\) in a network to another without have to to enter a password.   The relationship between the two machines will follow a client server model.  The machine on which you type "ssh &lt;username&gt;@&lt;ip address" is the **client \(aka "local machine"\) **an the machine that you are trying to connect to is the **server \(aka "host machine"\)**.  The server always maintains the information about the username and password.   A machine may act as either client or server depending on whether the user is logged on to it or trying to connect ot it: if the user is already logged on to it, it is the client.
 
@@ -6,7 +6,11 @@ In order for a client to connect to a server using SSH, it must set up a  public
 
 For example if I want to issue the following command:  ssh bob@1.2.3.4, the following setup must exist on the the client and server machines.
 
-![](/assets/ssh setup.png)
+### ![](/assets/ssh setup.png)Setting up SSH on a Mac or Linux Client
+
+
+
+### Setting up SSH on a Windows Client
 
 
 
