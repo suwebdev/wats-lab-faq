@@ -10,6 +10,8 @@ For example if I want to issue the following command:  ssh bob@1.2.3.4, the foll
 
 You can think of **authorized\_keys **as a file that helps the server trust the client and **known\_hosts **as a  file that helps the client trust the server.  The public key, **authorized\_keys **and **known\_hosts **files are all text files and the contents may be safely copy and pasted.  It is also possible to add a config file to the client .ssh directory and the **config **file can be used to map servers to different public/private key files if needed.  In general, SSH will look in the .ssh directory and try all keys if needed when attempted to authenticate.
 
+A machine may contain both and **authorized\_keys **file and a **known\_hosts ** file because it can be operating in the either role at different times.
+
 ### 
 
 ### Setting up SSH on a Mac or Linux Client
