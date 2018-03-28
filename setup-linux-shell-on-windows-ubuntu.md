@@ -1,14 +1,12 @@
 **This article answers the question "How to Setup a Linux Shell on Windows 10?"**
 
-Modify the Windows Features to add Linux Subsystem.  Click on Windows button, key in System, and choose System \(Control Panel\).  Search for Windows Features. Click on "Turn Windows feature on or off"
+1. Modify the Windows Features to add Linux Subsystem.  Click on Windows button, key in System, and choose System \(Control Panel\).  Search for Windows Features. Click on "Turn Windows feature on or off"
 
 ![](/assets/windows-features.JPG)
 
-Scroll down and put a check mark next to "Windows Subsystem for Linux"
+   2. Scroll down and put a check mark next to "Windows Subsystem for Linux"
 
 ![](/assets/windows-subsystem.JPG)
-
-
 
 
 
