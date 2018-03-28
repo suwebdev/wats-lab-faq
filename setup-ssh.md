@@ -1,0 +1,10 @@
+**This answers the question "How to setup SSH?"**
+
+SSH is the acronym for "Secure Shell".  An SSH connection allows you to connects one node\(machine\) in a network to another without have to to enter a password.   The relationship between the two machines will follow a client server model.  The machine on which you type "ssh &lt;username&gt;@&lt;ip address" is the **client \(aka "local machine"\) **an the machine that you are trying to connect to is the **server \(aka "host machine"\)**.  The server always maintains the information about the username and password.   A machine may act as either client or server depending on whether the user is logged on to it or trying to connect ot it: if the user is already logged on to it, it is the client.
+
+In order for a client to connect to a server using SSH, it must set up a  public key/private key pair.  The public key and private key provide the encryption needed for secure authentication.  An algorithm can verify that a give private key matches a given public key.  Both the public and private keys are stored on the client.  Before the client can connect to the server, the server must record the public key of the client in an file called **authorized\_keys **located in the **.ssh **directory under the home directory of the user on the server machine.  For example if I want to issue the following command:  ssh bob@1.2.3.4, the following setup must exist on the the client and server machines.
+
+
+
+When setting up SSH keys to enable SSH it is important to understand 
+
