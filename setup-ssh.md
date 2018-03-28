@@ -16,7 +16,29 @@ A machine may contain both and **authorized\_keys **file and a **known\_hosts **
 
 ### Setting up SSH on a Mac or Linux Client
 
-### 
+###### Check to see if key files already exist because you don't want to replace them if they might already be in use.
+
+`ls -la ~/.ssh/`
+
+###### Look for `id_rsa`_ _and `id_rsa.pub`
+
+###### Generate the key files
+
+`ssh-keygen`
+
+`Check that the key files have been properly generated`
+
+`ls -la ~/.ssh/`
+
+`Copy the public key to the buffer`
+
+`cat ~/.ssh/id_rsa.pub`
+
+###### Select contents of file from screen and `CTRL-c` to put in buffer
+
+###### Use a text editor and paste the key into the **authorized\_keys **file on the server you wish to access.
+
+
 
 ### Setting up SSH on a Windows Client
 
