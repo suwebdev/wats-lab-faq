@@ -40,7 +40,11 @@ A machine may contain both and **authorized\_keys **file and a **known\_hosts **
 
 ### Setting up SSH on a Windows Client
 
-If you are using Windows 10, you have 3 options for creating
+If you are using Windows 10, you have 3 options for creating the public/private key needed for SSH and running SSH.
+
+1. Use **git bash** to create keys and run SSH. When you [download ](https://git-scm.com/download/win)**git **to you windows machine, you will get the **git bash** program which will provide a bash interface.  See this article on **github.com**: [https://help.github.com/articles/testing-your-ssh-connection/](https://help.github.com/articles/testing-your-ssh-connection/).
+2. Use **puTTYgen **to create the public and private keys.  Use [**puTTY **](https://www.chiark.greenend.org.uk/~sgtatham/putty/latest.html)to create an SSH Session from a GUI.  See this youtube [video ](https://www.youtube.com/watch?v=O3ORQQnOgEc&t=2s)for an example of how to use puTTY to connect to a server.
+3. Install a linux shell on your Windows 10 machine. This will create a new file system, so you need to keep this in mind if you're developing on the Windows file system.  See instructions for setting up the Linux Shell for Windows in the WATS Lab FAQ.
 
 
 
