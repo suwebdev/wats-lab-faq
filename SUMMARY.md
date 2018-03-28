@@ -9,4 +9,5 @@
 * [Kill a process based on port number](kill-a-process-based-on-port-number.md)
 * [Validate HTML and CSS](validate-html-and-css.md)
 * [Setup SSH](setup-ssh.md)
+* [Setup Linux Shell on Windows \(Ubuntu\)](setup-linux-shell-on-windows-ubuntu.md)
 
