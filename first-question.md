@@ -95,7 +95,21 @@ Click on the Green button to add the key you have in you buffer.  You should see
 
 ![](/assets/ssh-key-add-2.PNG)
 
-#### Additional References
+# Update User Name and Email in Local Git Config
+
+The local Git program maintains configuration data about you that should correspond to your account on github.com.  You'll want to provide the email and user name that you used for github.com in when you execute the following commands.
+
+`git config --global user.name "Mona Lisa"`
+
+`git config --global user.email "email@example.com"`
+
+You can execute these commands to verify that you have set up the config variables properly.
+
+`git config --global user.name`
+
+`git config --global user.email`
+
+Additional References
 
 [https://help.github.com/articles/connecting-to-github-with-ssh/](https://help.github.com/articles/connecting-to-github-with-ssh/)
 
