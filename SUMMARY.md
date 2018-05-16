@@ -10,4 +10,7 @@
 * [Validate HTML and CSS](validate-html-and-css.md)
 * [Setup SSH](setup-ssh.md)
 * [Setup Linux Shell on Windows 10 \(Ubuntu\)](setup-linux-shell-on-windows-ubuntu.md)
+* [How to Add an Admin User to Wordpress using mySQL](how-to-add-an-admin-user-to-wordpress-using-mysql.md)
+* [Wordpress: Additional Permissions](wordpress-additional-permissions.md)
+* [Codenvy: Get started](codenvy-get-started.md)
 

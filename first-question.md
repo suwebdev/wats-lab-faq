@@ -26,7 +26,6 @@ Check to see if you already have a private key/public key setup by listing any f
 
 If you don't see any of the following files you will need to create  the key files
 
-* id\_rsa.pub
 * id\_dsa.pub
 * id\_ecdsa.pub
 * id\_ed25519.pub

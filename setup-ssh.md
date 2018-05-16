@@ -6,7 +6,7 @@ In order for a client to connect to a server using SSH, it must set up a  public
 
 For example if I want to issue the following command:  ssh bob@1.2.3.4, the following setup must exist on the the client and server machines.
 
-![](/assets/ssh_setup.png)
+![](/assets/ssh setup.png)
 
 You can think of **authorized\_keys **as a file that helps the server trust the client and **known\_hosts **as a  file that helps the client trust the server.  The public key, **authorized\_keys **and **known\_hosts **files are all text files and the contents may be safely copy and pasted.  It is also possible to add a config file to the client .ssh directory and the **config **file can be used to map servers to different public/private key files if needed.  In general, SSH will look in the .ssh directory and try all keys if needed when attempted to authenticate.
 
