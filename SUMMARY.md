@@ -13,4 +13,5 @@
 * [How to Add an Admin User to Wordpress using mySQL](how-to-add-an-admin-user-to-wordpress-using-mysql.md)
 * [Wordpress: Additional Permissions](wordpress-additional-permissions.md)
 * [Codenvy: Get started](codenvy-get-started.md)
+* [Lets Encrypt: HTTPS on Apache](lets-encrypt-https-on-apache.md)
 
