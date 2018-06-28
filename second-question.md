@@ -2,7 +2,7 @@
 
 # Install Visual Studio Code
 
-Download and install VS Code using the link below.  Acc
+Download and install VS Code using the link below. 
 
 [https://code.visualstudio.com/](https://code.visualstudio.com/)
 

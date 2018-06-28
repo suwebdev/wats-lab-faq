@@ -29,6 +29,5 @@ gulp.task('build', function(){
 gulp.task('default', function(callback) {
   runSequence('clean',
               'build',
-              'copy',
-              callback);
+              'copy');
 });
