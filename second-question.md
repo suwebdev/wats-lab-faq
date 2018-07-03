@@ -2,7 +2,7 @@
 
 # Install Visual Studio Code
 
-Download and install VS Code using the link below. 
+Download and install VS Code using the link below.
 
 [https://code.visualstudio.com/](https://code.visualstudio.com/)
 
@@ -33,6 +33,20 @@ Now you should see a **Go Live** button in the bottom status bar.  When you clic
 ![](/assets/go-live.PNG)Once the server has been started, the **Go Live **button will change to **Port: 5500 **which indicates that the server is running. The Go Live and Port:5500 buttons operate as a toggle. When you save changes in files that are being served, the server will automatically reserve the files. This will ensure that your browser is always running the latest saved changes.
 
 ![](/assets/go-live-port.PNG)
+
+## Beautify Plugin
+
+The Beautify Plug in will help with code formatting.  It will allow you to right-click on a document that you are editing and see a "Format Document" option.  Clicking on this will format your page.  As with all VS Code plugin installs, you go navigate to the plugin section, search for the plugin you want to install, press the **Install** button and then press the **Reload** button to make the plugin active.
+
+The picture below shows the install button.
+
+![](/assets/beautify-install.png)
+
+The picture below shows the Format Document option that you see when you right click in a document.
+
+![](/assets/beautify-format.png)
+
+
 
 # User Settings
 
