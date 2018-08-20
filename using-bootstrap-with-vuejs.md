@@ -6,7 +6,7 @@ This document describes two ways to add Bootstrap 4 to a Vue.js project.  The fi
 
 ## Linking to CDN's
 
-Linking to CDN's in a Vue.js project is similar to linking to them in any HTML5 document.  You'll follow the directions on the [Bootstrap home page](https://getbootstrap.com/docs/4.0/getting-started/introduction/) to add them to your **index.html** in the root of the application code.  There is one css link and three  JavaScript links.  Bootstrap 4 requires jquery and popper.js.  
+Linking to CDN's in a Vue.js project is similar to linking to them in any HTML5 document.  You'll follow the directions on the [Bootstrap home page](https://getbootstrap.com/docs/4.0/getting-started/introduction/) to add them to your **index.html** in the root of the application code.  There is one css link and three  JavaScript links.  Bootstrap 4 requires jquery and popper.js.
 
 ![](/assets/Screen Shot 2018-08-20 at 2.16.59 PM.png)
 
@@ -50,9 +50,16 @@ To use vue-bootstrap, you start by installing it from npm.  The [Vue-Bootstrap d
 npm i bootstrap-vue --save
 ```
 
+In your main.js file, add the following code to register the functionality provided by bootstrap as a Vue Component.
 
+```
+import Vue from 'vue'
+import BootstrapVue from 'bootstrap-vue'
+import 'bootstrap/dist/css/bootstrap.css'
+import 'bootstrap-vue/dist/bootstrap-vue.css'
 
-
+Vue.use(BootstrapVue);
+```
 
 
 
