@@ -2,9 +2,9 @@ This FAQ answer the question "How to add Bootstrap 4 to Vue.js project?"
 
 # Bootstrap 4 and Vue.js
 
-This document describes two ways to add Bootstrap 4 to a Vue.js project.  The first way is linking to CDN's in the index.html.  The second way is to use Vue-Bootstrap which will load into the apps main.js like a component.  If you use the CDN method, you can use standard bootstrap class names provided by the Bootstrap documentation. 
+This document describes two ways to add Bootstrap 4 to a Vue.js project.  The first way is linking to CDN's in the index.html.  The second way is to use Vue-Bootstrap which will load into the apps main.js like a component.  If you use the CDN method, you can use standard bootstrap class names provided by the Bootstrap documentation.
 
-## Linking to CDN's
+## Method 1: Linking to CDN's
 
 Linking to CDN's in a Vue.js project is similar to linking to them in any HTML5 document.  You'll follow the directions on the [Bootstrap home page](https://getbootstrap.com/docs/4.0/getting-started/introduction/) to add them to your **index.html** in the root of the application code.  There is one css link and three  JavaScript links.  Bootstrap 4 requires jquery and popper.js.
 
@@ -42,12 +42,12 @@ The code in your index.html will look something like this after you retrieve the
 
 There is a [sample project](https://github.com/rebeccapeltz/hikes) deployed on github that uses the CDN approach.
 
-Using Vue-Bootstrap
+## Method 2: Using Vue-Bootstrap
 
 To use vue-bootstrap, you start by installing it from npm.  The [Vue-Bootstrap documentation](https://bootstrap-vue.js.org/docs/) provides these install instructions. You'll enter this npm command into your terminal.  Use the save option to record the package in your package.json file, so that future users of your code will pick it up when they `npm install`.
 
 ```
-npm i bootstrap-vue --save
+
 ```
 
 You'll notice that the bootstrap-vue install added both bootstrap and bootstrap-vue to your node-modules directory.
@@ -108,7 +108,6 @@ Here's the code in a [sample application using Bootstrap Vue](https://github.com
       components: { App },
       template: '<App/>'
     })
-
 
 Network Downloads: What to Expect from each Method
 
