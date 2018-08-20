@@ -12,16 +12,17 @@ gulp.task('clean', function () {
   });
 });
 gulp.task('copy', function () {
-  gulp.src([
+  return gulp.src([
       '_book/**/*'
     ])
     .pipe(gulp.dest('docs'));
 });
 
-gulp.task('build', function(){
-  exec('gitbook build', function (err, stdout, stderr) {
+gulp.task('build', function(callback){
+  return exec('gitbook build', function (err, stdout, stderr) {
     console.log(stdout);
     console.log(stderr);
+    callback();
   });
 });
 
