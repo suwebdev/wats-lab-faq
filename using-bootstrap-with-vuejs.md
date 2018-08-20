@@ -2,7 +2,7 @@ This FAQ answer the question "How to add Bootstrap 4 to Vue.js project?"
 
 # Bootstrap 4 and Vue.js
 
-This document describes two ways to add Bootstrap 4 to a Vue.js project.  The first way is linking to CDN's in the index.html.  The second way is to use Vue-Bootstrap which will load into the apps main.js like a component.  If you use the CDN method, you can use standard bootstrap class names provided by the Bootstrap documentation. If you use the Vue-Bootstrap component, you'll use class names that are similar to standard Bootstrap, but are prefixed with "**b-**".
+This document describes two ways to add Bootstrap 4 to a Vue.js project.  The first way is linking to CDN's in the index.html.  The second way is to use Vue-Bootstrap which will load into the apps main.js like a component.  If you use the CDN method, you can use standard bootstrap class names provided by the Bootstrap documentation. 
 
 ## Linking to CDN's
 
@@ -63,5 +63,60 @@ import 'bootstrap-vue/dist/bootstrap-vue.css'
 Vue.use(BootstrapVue);
 ```
 
+Here's the code in a [sample application using Bootstrap Vue](https://github.com/rebeccapeltz/hikes/tree/npm-bs4).Notice that there is no reference to Bootstrap or jquery in the index.html.
 
+**index.html**
+
+```
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1.0">
+  <title>Hikes</title>
+  <link href="https://fonts.googleapis.com/css?family=Ubuntu" rel="stylesheet">
+  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.2.0/css/all.css" integrity="sha384-hWVjflwFxL6sNzntih27bfxkr27PmbbK/iSvJ+a4+0owXq79v+lsFkW54bOGbiDQ" crossorigin="anonymous">
+</head>
+<body>
+  <div id="app"></div>
+</body>
+
+</html>
+```
+
+**main.js**
+
+    // The Vue build version to load with the `import` command
+    // (runtime-only or standalone) has been set in webpack.base.conf with an alias.
+    import Vue from 'vue'
+    import App from './App'
+    import router from './router'
+    import BootstrapVue from 'bootstrap-vue'
+
+    import 'bootstrap/dist/css/bootstrap.css'
+    import 'bootstrap-vue/dist/bootstrap-vue.css'
+
+    Vue.use(BootstrapVue);
+
+    Vue.config.productionTip = false
+
+    /* eslint-disable no-new */
+    new Vue({
+      el: '#app',
+      router,
+      components: { App },
+      template: '<App/>'
+    })
+
+
+Network Downloads: What to Expect from each Method
+
+The picture below shows the network downloads for the 1st method using CDNs. Note that the bootstrap files can be seen as downloads.
+
+![](/assets/Screen Shot 2018-08-20 at 2.33.23 PM.png)
+
+In the picture below where Vue-Bootstrap is used on a branch from the code above, you won't see the bootstrap files in the network display.
+
+![](/assets/Screen Shot 2018-08-20 at 2.36.09 PM.png)
 
