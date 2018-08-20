@@ -47,7 +47,7 @@ There is a [sample project](https://github.com/rebeccapeltz/hikes) deployed on g
 To use vue-bootstrap, you start by installing it from npm.  The [Vue-Bootstrap documentation](https://bootstrap-vue.js.org/docs/) provides these install instructions. You'll enter this npm command into your terminal.  Use the save option to record the package in your package.json file, so that future users of your code will pick it up when they `npm install`.
 
 ```
-
+npm i bootstrap-vue --save
 ```
 
 You'll notice that the bootstrap-vue install added both bootstrap and bootstrap-vue to your node-modules directory.
