@@ -50,7 +50,9 @@ To use vue-bootstrap, you start by installing it from npm.  The [Vue-Bootstrap d
 npm i bootstrap-vue --save
 ```
 
-In your main.js file, add the following code to register the functionality provided by bootstrap as a Vue Component.
+You'll notice that the bootstrap-vue install added both bootstrap and bootstrap-vue to your node-modules directory.
+
+In your main.js file, add the following code to register the functionality provided by bootstrap as a Vue Component and make the CSS available.
 
 ```
 import Vue from 'vue'
