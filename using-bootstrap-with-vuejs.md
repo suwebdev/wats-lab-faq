@@ -1,4 +1,4 @@
-This FAQ answer the question "How to add Bootstrap 4 to Vue.js project?"
+This FAQ answers the question "How to add Bootstrap 4 to Vue.js project?"
 
 # Bootstrap 4 and Vue.js
 
