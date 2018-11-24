@@ -15,5 +15,5 @@
 * [Codenvy: Get started](codenvy-get-started.md)
 * [Lets Encrypt: HTTPS on Apache](lets-encrypt-https-on-apache.md)
 * [Using Bootstrap with Vue.js](using-bootstrap-with-vuejs.md)
-* Git Command Line
+* [Git Command Line](git-command-line.md)
 
