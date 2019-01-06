@@ -46,11 +46,15 @@ The picture below shows the Format Document option that you see when you right c
 
 ![](/assets/beautify-format.png)
 
-
-
 # User Settings
 
-VS Code allows you to customize settings for all projects \(User Settings\) or for a single project \(Workspace settings\).  To modify default settings select **Code** \| **Preferences** for the Mac or **File** \| **Preferences** for Windows and then **Settings**.  You will see 2 files side by side.  On the left are the default settings and on the right are the User setting overrides.
+VS Code allows you to customize settings for all projects \(User Settings\) or for a single project \(Workspace settings\). VS Code provides a GUI settings manager by default. To modify default settings by upgrading JSON configuration directly use the open command \(CTRL-Shift-P on Windows or CMD-Shift-P on Mac\) and type in "Open Settins \(JSON\)".   
+
+![](/assets/Screen Shot 2019-01-05 at 4.12.16 PM.png) 
+
+
+
+You will see 2 files side by side.  On the left are the default settings and on the right are the User setting overrides.
 
 ![](/assets/Screen Shot 2018-04-12 at 2.13.45 PM.png)
 
@@ -62,7 +66,7 @@ To change a default setting find the setting on the left and then copy it to the
 
 `}`
 
-If you are using Windows and want to use "Git Bash" in for the VS Code terminal add the following to your User Settings:
+If **you are using Windows** and want to use "Git Bash" in for the VS Code terminal add the following to your User Settings:
 
 `"terminal.integrated.shell.windows": "C:\\Program Files\\Git\\bin\\bash.exe"`
 
