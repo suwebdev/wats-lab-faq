@@ -212,6 +212,26 @@
 <p>You can execute these commands to verify that you have set up the config variables properly.</p>
 <p><code>git config --global user.name</code></p>
 <p><code>git config --global user.email</code></p>
+<h4 id="making-vs-code-the-default-editor-for-git">Making VS Code the Default Editor for Git</h4>
+<p>You can make Visual Studio Code the default editor for git.  If you ever forget to close the quotes when adding the message during commit (<code>git commit -m&quot;update</code>) you find that git open up the default editor.</p>
+<p>Before running the git config to set VS Code as the default editor, check that the application is in your computer&apos;s path so that it can be found.  You can check this by going to the command line and running.</p>
+<p><code>code --help</code></p>
+<p>If a list of help topic is printed to the screen, the VS Code is in the path.  If not investigate how to get VS Code into the Path.  If in the path execute the following in the command line.</p>
+<p><code>git config --global core.editor &quot;code --wait&quot;</code></p>
+<p>test with this: <code>git config --global -e</code></p>
+<p>If you set up, the command above will open the .gitconfig file which is where git stores its config variable in VS Code.</p>
+<p>See the answer to a question about this on Stack Overflow for more information: Editor For Git]</p>
+<p><a href="https://stackoverflow.com/questions/30024353/how-to-use-visual-studio-code-as-default-editor-for-git" target="_blank">How to Use Visual Studio Code as Default Editor For Git</a></p>
+<h4 id="adding-vs-code-to-your-computer-path">Adding VS Code to your computer Path</h4>
+<h4 id="mac-select">Mac: Select</h4>
+<ul>
+<li>Mac: <strong>Shell Command: Install &apos;Code&apos; command in path</strong>
+from the Command Palette.</li>
+<li>Windows: Make sure you selected
+<strong>Add to PATH</strong>
+during the installation.</li>
+<li>Linux: Make sure you installed Code via our new .deb or .rpm packages.</li>
+</ul>
 <p>Additional References</p>
 <p><a href="https://help.github.com/articles/connecting-to-github-with-ssh/" target="_blank">https://help.github.com/articles/connecting-to-github-with-ssh/</a></p>
 
@@ -228,7 +248,7 @@
     
     <div class="faq-page-footer">
         <a href="https://www.gitbook.com" target="_blank">Published with GitBook</a> ·
-        <span>Last edit January 5th 2019</span>
+        <span>Last edit January 12th 2019</span>
     </div>
     
 
@@ -271,7 +291,7 @@
 
 <script>
 (function() {
-    gitbook.page.hasChanged({"page":{"title":"Install Git Locally","level":"1.2","depth":1,"next":{"title":"Setup Dev environment with Visual Studio Code","level":"1.3","depth":1,"path":"second-question.md","ref":"second-question.md","articles":[]},"previous":{"title":"How To ...","level":"1.1","depth":1,"path":"README.md","ref":"README.md","articles":[]},"dir":"ltr"},"config":{"gitbook":"*","theme":"default","variables":{},"plugins":["theme-faq","-fontsettings","-sharing"],"pluginsConfig":{"highlight":{},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"theme-faq":{},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"}},"file":{"path":"first-question.md","mtime":"2019-01-06T00:06:45.376Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2019-01-06T00:24:10.471Z"},"basePath":".","book":{"language":""}})
+    gitbook.page.hasChanged({"page":{"title":"Install Git Locally","level":"1.2","depth":1,"next":{"title":"Setup Dev environment with Visual Studio Code","level":"1.3","depth":1,"path":"second-question.md","ref":"second-question.md","articles":[]},"previous":{"title":"How To ...","level":"1.1","depth":1,"path":"README.md","ref":"README.md","articles":[]},"dir":"ltr"},"config":{"gitbook":"*","theme":"default","variables":{},"plugins":["theme-faq","-fontsettings","-sharing"],"pluginsConfig":{"highlight":{},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"theme-faq":{},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"}},"file":{"path":"first-question.md","mtime":"2019-01-12T23:57:45.675Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2019-01-12T23:58:05.440Z"},"basePath":".","book":{"language":""}})
 })();
 </script>
 <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
