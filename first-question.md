@@ -108,6 +108,39 @@ You can execute these commands to verify that you have set up the config variabl
 
 `git config --global user.email`
 
+#### Making VS Code the Default Editor for Git
+
+You can make Visual Studio Code the default editor for git.  If you ever forget to close the quotes when adding the message during commit \(`git commit -m"update`\) you find that git open up the default editor.
+
+Before running the git config to set VS Code as the default editor, check that the application is in your computer's path so that it can be found.  You can check this by going to the command line and running.
+
+`code --help`
+
+If a list of help topic is printed to the screen, the VS Code is in the path.  If not investigate how to get VS Code into the Path.  If in the path execute the following in the command line.
+
+`git config --global core.editor "code --wait"`
+
+test with this: `git config --global -e`
+
+If you set up, the command above will open the .gitconfig file which is where git stores its config variable in VS Code.
+
+See the answer to a question about this on Stack Overflow for more information: Editor For Git\]
+
+[How to Use Visual Studio Code as Default Editor For Git](https://stackoverflow.com/questions/30024353/how-to-use-visual-studio-code-as-default-editor-for-git)
+
+#### Adding VS Code to your computer Path
+
+#### Mac: Select
+
+* Mac: **Shell Command: Install 'Code' command in path**
+  from the Command Palette.
+* Windows: Make sure you selected
+  **Add to PATH**
+  during the installation.
+* Linux: Make sure you installed Code via our new .deb or .rpm packages.
+
+
+
 Additional References
 
 [https://help.github.com/articles/connecting-to-github-with-ssh/](https://help.github.com/articles/connecting-to-github-with-ssh/)
