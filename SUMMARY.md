@@ -16,4 +16,5 @@
 * [Lets Encrypt: HTTPS on Apache](lets-encrypt-https-on-apache.md)
 * [Using Bootstrap with Vue.js](using-bootstrap-with-vuejs.md)
 * [Git Command Line](git-command-line.md)
+* [Create a Droplet on Digital Ocean](create-a-droplet-on-digital-ocean.md)
 
