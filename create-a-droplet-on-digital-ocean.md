@@ -26,18 +26,24 @@ If you already have a droplet and you want to add an SSH key, you will need to d
 
 1. On you local machine copy the key into the buffer `cat ~/.ssh/id_rsa.pub` and select and copy.
 2. Launch the console from Digital Ocean dashboard and login using your DO login credentials.
+3. Use `ls -la ~/.ssh/authorized_keys`to determine of the authorized _keys files exists.  If it doesn't create it with _`touch ~/.ssh/authorized_keys`
+4. Use nano to edit the authorized\_keys file \(nano has copy/paste\) and paste the SSH key from your local machine into the authorized keys file and save.
+5. Set permissions on the `authorized_keys` file to make it accessible   
+
+```
+chmod -R go= ~/.ssh
+chown -R $USER:$USER ~/.ssh
+```
 
 ![](/assets/Screen Shot 2019-01-16 at 10.13.07 AM.png)
 
 ![](/assets/Screen Shot 2019-01-16 at 10.13.44 AM.png)
 
-1. Use `ls -la ~/.ssh/authorized_keys`
 
-to determine of the authorized _keys files exists.  If it doesn't create it with _`touch ~/.ssh/authorized_keys`
 
-1. Use nano to edit the authorized\_keys file \(nano has copy/paste\) and paste the SSH key from your local machine into the authorized keys file and save.
+\[Upload keys on an existing droplet\]\([https://www.digitalocean.com/docs/droplets/how-to/add-ssh-keys/to-existing-droplet/](https://www.digitalocean.com/docs/droplets/how-to/add-ssh-keys/to-existing-droplet/%29\)
 
-\[Upload keys on an existing droplet\]\([https://www.digitalocean.com/docs/droplets/how-to/add-ssh-keys/to-existing-droplet/](https://www.digitalocean.com/docs/droplets/how-to/add-ssh-keys/to-existing-droplet/\)\)
+
 
 ## Create a Digital Ocean Droplet
 
