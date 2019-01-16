@@ -16,9 +16,9 @@ Because the application that runs to setup a droplet prompts the user for an exi
 
 The net effect of having an SSH Key uploaded to you DO account is that you will see it offered up when you are creating your droplet.
 
-\[Upload SSH Keys to Digital Ocean Account\]\([https://www.digitalocean.com/docs/droplets/how-to/add-ssh-keys/to-account/\](https://www.digitalocean.com/docs/droplets/how-to/add-ssh-keys/to-account/\)\)
+\[Upload SSH Keys to Digital Ocean Account\]\([https://www.digitalocean.com/docs/droplets/how-to/add-ssh-keys/to-account/\](https://www.digitalocean.com/docs/droplets/how-to/add-ssh-keys/to-account/%29\)
 
-\[How to Add SSH Keys\]\([https://www.digitalocean.com/docs/droplets/how-to/add-ssh-keys/](https://www.digitalocean.com/docs/droplets/how-to/add-ssh-keys/%29\)\)
+\[How to Add SSH Keys\]\([https://www.digitalocean.com/docs/droplets/how-to/add-ssh-keys/](https://www.digitalocean.com/docs/droplets/how-to/add-ssh-keys/%29%29\)
 
 ### How to Add an SSH Key Manually to an Existing Droplet
 
@@ -31,15 +31,13 @@ If you already have a droplet and you want to add an SSH key, you will need to d
 
 ![](/assets/Screen Shot 2019-01-16 at 10.13.44 AM.png)
 
-3. Use \```ls -la ~/.ssh/authorized_keys```
+1. Use `ls -la ~/.ssh/authorized_keys`
 
-to determine of the authorized _keys files exists.  If it doesn't create it with `touch ~/.ssh/authorized_keys`_
+to determine of the authorized _keys files exists.  If it doesn't create it with _`touch ~/.ssh/authorized_keys`
 
-4.  Use nano to edit the authorized\_keys file \(nano has copy/paste\) and paste the SSH key from your local machine into the authorized keys file and save.
+1. Use nano to edit the authorized\_keys file \(nano has copy/paste\) and paste the SSH key from your local machine into the authorized keys file and save.
 
-\[Upload keys on an existing droplet\]\(https://www.digitalocean.com/docs/droplets/how-to/add-ssh-keys/to-existing-droplet/\)
-
-
+\[Upload keys on an existing droplet\]\([https://www.digitalocean.com/docs/droplets/how-to/add-ssh-keys/to-existing-droplet/](https://www.digitalocean.com/docs/droplets/how-to/add-ssh-keys/to-existing-droplet/\)\)
 
 ## Create a Digital Ocean Droplet
 
