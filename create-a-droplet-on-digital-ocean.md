@@ -16,9 +16,9 @@ Because the application that runs to setup a droplet prompts the user for an exi
 
 The net effect of having an SSH Key uploaded to you DO account is that you will see it offered up when you are creating your droplet.
 
-\[Upload SSH Keys to Digital Ocean Account\]\([https://www.digitalocean.com/docs/droplets/how-to/add-ssh-keys/to-account/\](https://www.digitalocean.com/docs/droplets/how-to/add-ssh-keys/to-account/%29\)
+[Upload SSH Keys to Digital Ocean Account]([https://www.digitalocean.com/docs/droplets/how-to/add-ssh-keys/to-account](https://www.digitalocean.com/docs/droplets/how-to/add-ssh-keys/to-account)
 
-\[How to Add SSH Keys\]\([https://www.digitalocean.com/docs/droplets/how-to/add-ssh-keys/](https://www.digitalocean.com/docs/droplets/how-to/add-ssh-keys/%29%29\)
+[How to Add SSH Keys]([https://www.digitalocean.com/docs/droplets/how-to/add-ssh-keys](https://www.digitalocean.com/docs/droplets/how-to/add-ssh-keys)
 
 ### How to Add an SSH Key Manually to an Existing Droplet
 
@@ -39,7 +39,7 @@ chown -R $USER:$USER ~/.ssh
 
 ![](/assets/Screen Shot 2019-01-16 at 10.13.44 AM.png)
 
-\[Upload keys on an existing droplet\]\([https://www.digitalocean.com/docs/droplets/how-to/add-ssh-keys/to-existing-droplet/](https://www.digitalocean.com/docs/droplets/how-to/add-ssh-keys/to-existing-droplet/%29\)
+[Upload keys on an existing droplet]([https://www.digitalocean.com/docs/droplets/how-to/add-ssh-keys/to-existing-droplet](https://www.digitalocean.com/docs/droplets/how-to/add-ssh-keys/to-existing-droplet)
 
 ## Create a Digital Ocean Droplet
 
@@ -51,9 +51,9 @@ Once the image it created, go to your local machine and login using ssh.  Here's
 
 If your using a Mac you can do this from the terminal and if you're using Windows, I recommend doing it from Git Bash.
 
-\[Create droplet\]\(https://www.digitalocean.com/docs/droplets/how-to/create/\)
+[Create droplet](https://www.digitalocean.com/docs/droplets/how-to/create/)
 
-\[Connect with SSH\]\(https://www.digitalocean.com/docs/droplets/how-to/connect-with-ssh/\)
+[Connect with SSH](https://www.digitalocean.com/docs/droplets/how-to/connect-with-ssh/)
 
 
 
