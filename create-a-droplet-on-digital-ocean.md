@@ -16,9 +16,9 @@ Because the application that runs to setup a droplet prompts the user for an exi
 
 The net effect of having an SSH Key uploaded to you DO account is that you will see it offered up when you are creating your droplet.
 
-[Upload SSH Keys to Digital Ocean Account]([https://www.digitalocean.com/docs/droplets/how-to/add-ssh-keys/to-account](https://www.digitalocean.com/docs/droplets/how-to/add-ssh-keys/to-account)
+[Upload SSH Keys to Digital Ocean Account](https://www.digitalocean.com/docs/droplets/how-to/add-ssh-keys/to-account)
 
-[How to Add SSH Keys]([https://www.digitalocean.com/docs/droplets/how-to/add-ssh-keys](https://www.digitalocean.com/docs/droplets/how-to/add-ssh-keys)
+[How to Add SSH Keys](https://www.digitalocean.com/docs/droplets/how-to/add-ssh-keys)
 
 ### How to Add an SSH Key Manually to an Existing Droplet
 
@@ -39,13 +39,13 @@ chown -R $USER:$USER ~/.ssh
 
 ![](/assets/Screen Shot 2019-01-16 at 10.13.44 AM.png)
 
-[Upload keys on an existing droplet]([https://www.digitalocean.com/docs/droplets/how-to/add-ssh-keys/to-existing-droplet](https://www.digitalocean.com/docs/droplets/how-to/add-ssh-keys/to-existing-droplet)
+\[Upload keys on an existing droplet\]\([https://www.digitalocean.com/docs/droplets/how-to/add-ssh-keys/to-existing-droplet](https://www.digitalocean.com/docs/droplets/how-to/add-ssh-keys/to-existing-droplet)
 
 ## Create a Digital Ocean Droplet
 
 Follow the step for creating a droplet in the link below.  Choose an Ubuntu images/1 GB memory/25 GB disk/San Francisco for your data center as it's the closest to Seattle.  You want the simplest images for your server as possible and it should only cost $5/month.  You don't need a back up or block storage.  If you uploaded an SSH key you should see it available when under "Add SSH key" and you should select it.    Then just click on create.  If you make a mistake just delete the image from the console and try it again.  Don't get attached to your server, especially when there's nothing on it.  Make note of the IP Address.
 
-Once the image it created, go to your local machine and login using ssh.  Here's an example if your IP address is  `203.0.113.0` 
+Once the image it created, go to your local machine and login using ssh.  Here's an example if your IP address is  `203.0.113.0`
 
 `ssh root@203.0.113.0`
 
@@ -54,6 +54,4 @@ If your using a Mac you can do this from the terminal and if you're using Window
 [Create droplet](https://www.digitalocean.com/docs/droplets/how-to/create/)
 
 [Connect with SSH](https://www.digitalocean.com/docs/droplets/how-to/connect-with-ssh/)
-
-
 
