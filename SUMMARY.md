@@ -17,4 +17,5 @@
 * [Using Bootstrap with Vue.js](using-bootstrap-with-vuejs.md)
 * [Git Command Line](git-command-line.md)
 * [Create a Droplet on Digital Ocean](create-a-droplet-on-digital-ocean.md)
+* [Migrate Vue 2 Code from Vue CLI 2 to Vue CLI 3](migrate-vue-2-code-from-vue-cli-2-to-vue-cli-3.md)
 
