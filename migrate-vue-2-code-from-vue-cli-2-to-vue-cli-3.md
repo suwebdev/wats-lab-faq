@@ -51,7 +51,7 @@ As of this writing, the current version is **3.3.0**, but there is a lot of deve
 
 ## Migrate Code
 
-The new file structure that CLI 3 is looking for is shown in the picture below.  Your goal will be to migrate your file structure to this new structure.  
+The new file structure that CLI 3 is looking for is shown in the picture below.  Your goal will be to migrate your file structure to this new structure.
 
 ![](/assets/vue-cli-3-fs.png)
 
@@ -63,10 +63,11 @@ The changes to look for in this picture are:
 * there some new config files - this document will provide the contents for these files, in particular `.babel.config.js`, `postcssrc.js`
 * there a couple of config files that I created specifically to make migration easier to put production build code in the `docs` directory
 * the `package.json` library dependencies has changed significantly and you'll want to replace the entire content of `package.json` with code provided in this document
+* the `static` folder has been renamed to `public` and the index.html has moved into the `public` folder
 
 NOTE: It's possible that the config code provided in this document may change. You can always generate the lates config code by running the new project `create` command to create a new project that will have all of the latest config code.  The project create command will not create the vue.config.js or the aliases.config.js as those are user created and I created them to allow for the use of the `@` symbol to specify `src` and to make the build create distributable files in the `docs` folder so that we can host on `github.io`.
 
-To create a new project in Vue CLI 3 you can run the command below which will create a project called `hello-world`. Notice that the keyword has changed froom `init` to `create`. You should also pick the default babel/eslint. 
+To create a new project in Vue CLI 3 you can run the command below which will create a project called `hello-world`. Notice that the keyword has changed froom `init` to `create`. You should also pick the default babel/eslint.
 
 ```
 vue create hello-world
@@ -78,9 +79,23 @@ The purposed of these migration instructions is that you shouldn't have to creat
 
 ## Migration Steps
 
-...
+Rename `static` to `public`
 
+move `index.html` into `public`
 
+create an `aliases.config.js` file and load it with the contents specified in this document.
+
+delete `package-lock.json` file - this file will get automatically recreated when you run `npm install`
+
+replace the contents of `package.json` with the code contents specified in this document
+
+create a `router.js` file in the root of the project and move the contents of router/index.js into this file
+
+create a `views` directory and move any files in the `components` directory that are reference in the router.js into the `views` directory
+
+add an empty .gitkeep file to the `views` and `components` directory \(this is to keep them around even if empty\)
+
+update links in `router.js` to point to files in the `views` direcory
 
 
 
