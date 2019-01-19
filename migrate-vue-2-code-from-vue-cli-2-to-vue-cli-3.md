@@ -51,7 +51,7 @@ As of this writing, the current version is **3.3.0**, but there is a lot of deve
 
 Migrate Code
 
-The new file structure that CLI 3 is looking for is shown in the picture below.  Your goal will be to migrate your file structure to this new structure.  
+The new file structure that CLI 3 is looking for is shown in the picture below.  Your goal will be to migrate your file structure to this new structure.
 
 
 
