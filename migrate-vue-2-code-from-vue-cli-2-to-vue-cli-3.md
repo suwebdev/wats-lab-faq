@@ -49,6 +49,20 @@ vue --version
 
 As of this writing, the current version is **3.3.0**, but there is a lot of development taking place with Vue.js and this may not be the version that you get.  Your major version \(the first number should at least be a **3**\).
 
+## Build and Dev
+
+CLI 3 provides a production and dev build just as CLI 2 did but the command to run the dev build and server has changed. To run the dev build use the following command:
+
+```
+npm run serve
+```
+
+To run the production build, which should create runnable html/css/js in the docs directory:
+
+```
+npm run build
+```
+
 ## Migrate Code
 
 The new file structure that CLI 3 is looking for is shown in the picture below.  Your goal will be to migrate your file structure to this new structure.
@@ -222,14 +236,7 @@ module.exports = {
     "not ie <= 8"
   ]
 }
-
 ```
-
-
-
-
-
-
 
 
 
