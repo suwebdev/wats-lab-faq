@@ -1,0 +1,245 @@
+
+<!DOCTYPE HTML>
+<html lang="" >
+    <head>
+        <meta charset="UTF-8">
+        <meta content="text/html; charset=utf-8" http-equiv="Content-Type">
+        <title>
+    
+        How to Add an Admin User to Wordpress using mySQL · GitBook
+    
+</title>
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="description" content="">
+        <meta name="generator" content="GitBook 3.2.3">
+        
+        
+        
+    <link rel="stylesheet"
+        href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css"
+        integrity="sha384-1q8mTJOASx8j1Au+a5WDVnPi2lkFfwwEAa8hDDdjZlpLegxhjVME1fgjWPGmkzs7"
+        crossorigin="anonymous">
+    <link rel="stylesheet"
+        href="https://maxcdn.bootstrapcdn.com/font-awesome/4.6.0/css/font-awesome.min.css"
+        integrity="sha384-I6JCnqxMbC2DuiHjsoCiLa15NVbKRf8/ooANRLsXD87zD2dVqzlz6Oqjvj470ztk"
+        crossorigin="anonymous">
+    <link rel="stylesheet" href="gitbook/style.css">
+    
+            
+                
+                <link rel="stylesheet" href="gitbook/gitbook-plugin-highlight/website.css">
+                
+            
+                
+                <link rel="stylesheet" href="gitbook/gitbook-plugin-search/search.css">
+                
+            
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+
+        
+    
+    <meta name="HandheldFriendly" content="true"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    <link rel="apple-touch-icon-precomposed" sizes="152x152" href="gitbook/images/apple-touch-icon-precomposed-152.png">
+    <link rel="shortcut icon" href="gitbook/images/favicon.ico" type="image/x-icon">
+
+    </head>
+    <body>
+        
+<nav class="faq-navbar navbar navbar-default">
+    <div class="container">
+        <div class="navbar-header">
+            <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar-menu" aria-expanded="false">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+            </button>
+            <a class="navbar-brand" href=".">
+                Help Center
+            </a>
+        </div>
+
+        <div class="collapse navbar-collapse" id="navbar-menu">
+            
+<ul class="nav navbar-nav navbar-right">
+    <li><a href="wats-faq.pdf" target="_blank">PDF</a></li>
+</ul>
+
+        </div>
+    </div>
+</nav>
+
+<div class="faq-header">
+    <div class="container">
+    <h1>
+        
+            
+                How to Add an Admin User to Wordpress using mySQL
+            
+        
+    </h1>
+
+    
+<div id="book-search-input" role="search">
+    <input type="text" placeholder="Have a question? Ask or enter a search term here." />
+</div>
+
+
+    
+    </div>
+</div>
+
+<div class="faq-page-container">
+
+<div id="book-search-results">
+    <div class="search-noresults">
+    
+    
+    
+        <div class="panel panel-default">
+            <div class="panel-body">
+                <ol class="breadcrumb">
+                    <li><a href=".">FAQ</a></li>
+                    
+                        
+                            
+                        
+                            
+                        
+                            
+                        
+                            
+                        
+                            
+                        
+                            
+                        
+                            
+                        
+                            
+                        
+                            
+                        
+                            
+                        
+                            
+                        
+                            
+                        
+                            
+                        
+                            
+                        
+                            
+                        
+                            
+                        
+                            
+                        
+                            
+                        
+                    
+                    <li class="active">How to Add an Admin User to Wordpress using mySQL</li>
+                </ol>
+                <div class="faq-page">
+                <p>This FAQ answer the question &quot;How to add an admin user to Wordpress using mySQL?&quot;</p>
+<h1 id="add-admin-user-to-wordpress-using-mysql">Add Admin User to Wordpress using mySQL</h1>
+<p>Sign on the mySQL.  Digital Ocean provides the admin password to sign on into mySQL here: <code>/root/.digitalocean_password</code></p>
+<p>Copy the password into the buffer and paste after executing the following command:</p>
+<p><code>mysql -u root -p</code></p>
+<p>This will log you into mysql and you should see the &apos;mysql&gt;&apos; prompt.</p>
+<p>Change to the wordpress database by executing the following command:</p>
+<p><code>use wordpress;</code></p>
+<p>Note you can find all databases with the following command</p>
+<p><code>show databases;</code></p>
+<p>and all tables with this command</p>
+<p><code>show tables;</code></p>
+<p>Verify that you are in the wordpress database by executing show tables; and seeing the &quot;wp_&quot; tables.</p>
+<p>Then execute the following commands.  Replace the &quot;&lt;&gt;&quot; with the data you want.  Note that once the password is in the database it will be one-way encrypted with MD5 and you won&apos;t be able to see it in plain text.  Note that the ID cannot already exist so you may want to issues the (<code>select * from `wordpress`.`wp_users`;</code></p>
+<p>to see what the current user ID&apos;s are and pick the next one)</p>
+<p>Use the same ID value in all 3 queries.  For example I&apos;m using &apos;4&apos; in the queries below.</p>
+<p><code>INSERT INTO `wordpress`.`wp_users` (`ID`, `user_login`, `user_pass`, `user_nicename`, `user_email`, `user_url`, `user_registered`, `user_activation_key`, `user_status`, `display_name`) VALUES (&apos;4&apos;, &apos;demo&apos;, MD5(&apos;demo&apos;), &apos;&lt;user nicename&gt;&apos;, &apos;test@yourdomain.com&apos;,&apos;http://www.test.com/&apos;, &apos;2018-04-17 00:00:00&apos;, &apos;&apos;, &apos;0&apos;, &apos;&lt;user display name&gt;&apos;);</code></p>
+<p><code>INSERT INTO `wordpress`.`wp_usermeta` (`umeta_id`, `user_id`, `meta_key`, `meta_value`) VALUES (NULL, &apos;4&apos;, &apos;wp_capabilities&apos;, &apos;a:1:{s:13:&quot;administrator&quot;;s:1:&quot;1&quot;;}&apos;);</code></p>
+<p><code>INSERT INTO `wordpress`.`wp_usermeta` (`umeta_id`, `user_id`, `meta_key`, `meta_value`) VALUES (NULL, &apos;4&apos;, &apos;wp_user_level&apos;, &apos;10&#x2019;);</code></p>
+<p>A Web Reference: <a href="http://www.wpbeginner.com/wp-tutorials/how-to-add-an-admin-user-to-the-wordpress-database-via-mysql/" target="_blank">http://www.wpbeginner.com/wp-tutorials/how-to-add-an-admin-user-to-the-wordpress-database-via-mysql/</a></p>
+
+                </div>
+            </div>
+        </div>
+
+        
+            
+        
+    
+
+
+    
+    <div class="faq-page-footer">
+        <a href="https://www.gitbook.com" target="_blank">Published with GitBook</a> ·
+        <span>Last edit July 3rd 2018</span>
+    </div>
+    
+
+    </div>
+    <div class="search-results">
+        <div class="has-results">
+            
+            <h1 class="search-results-title"><span class='search-results-count'></span> results for "<span class='search-query'></span>"</h1>
+            <ul class="search-results-list"></ul>
+            
+        </div>
+        <div class="no-results">
+            
+            <h1 class="search-results-title">No results matching "<span class='search-query'></span>"</h1>
+            
+        </div>
+    </div>
+</div>
+
+</div>
+
+        
+<script src="gitbook/gitbook.js"></script>
+
+    
+    <script src="gitbook/gitbook-plugin-search/search-engine.js"></script>
+    
+
+    
+    <script src="gitbook/gitbook-plugin-search/search.js"></script>
+    
+
+    
+    <script src="gitbook/gitbook-plugin-lunr/lunr.min.js"></script>
+    
+
+    
+    <script src="gitbook/gitbook-plugin-lunr/search-lunr.js"></script>
+    
+
+<script>
+(function() {
+    gitbook.page.hasChanged({"page":{"title":"How to Add an Admin User to Wordpress using mySQL","level":"1.11","depth":1,"next":{"title":"Wordpress: Additional Permissions","level":"1.12","depth":1,"path":"wordpress-additional-permissions.md","ref":"wordpress-additional-permissions.md","articles":[]},"previous":{"title":"Setup Linux Shell on Windows 10 (Ubuntu)","level":"1.10","depth":1,"path":"setup-linux-shell-on-windows-ubuntu.md","ref":"setup-linux-shell-on-windows-ubuntu.md","articles":[]},"dir":"ltr"},"config":{"gitbook":"*","theme":"default","variables":{},"plugins":["theme-faq","-fontsettings","-sharing"],"pluginsConfig":{"highlight":{},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"theme-faq":{},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"}},"file":{"path":"how-to-add-an-admin-user-to-wordpress-using-mysql.md","mtime":"2018-07-03T14:11:22.709Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2019-01-19T16:38:29.618Z"},"basePath":".","book":{"language":""}})
+})();
+</script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
+
+    </body>
+</html>
+

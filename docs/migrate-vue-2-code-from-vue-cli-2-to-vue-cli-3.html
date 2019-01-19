@@ -180,7 +180,12 @@ node --version
 </code></pre><p>Then verify the version</p>
 <pre><code>vue --version
 </code></pre><p>As of this writing, the current version is <strong>3.3.0</strong>, but there is a lot of development taking place with Vue.js and this may not be the version that you get.  Your major version (the first number should at least be a <strong>3</strong>).</p>
-<h2 id="migrate-code">Migrate Code</h2>
+<h2 id="build-and-dev">Build and Dev</h2>
+<p>CLI 3 provides a production and dev build just as CLI 2 did but the command to run the dev build and server has changed. To run the dev build use the following command:</p>
+<pre><code>npm run serve
+</code></pre><p>To run the production build, which should create runnable html/css/js in the docs directory:</p>
+<pre><code>npm run build
+</code></pre><h2 id="migrate-code">Migrate Code</h2>
 <p>The new file structure that CLI 3 is looking for is shown in the picture below.  Your goal will be to migrate your file structure to this new structure.</p>
 <p><img src="assets/vue-cli-3-fs.png" alt=""></p>
 <p>The changes to look for in this picture are:</p>
@@ -371,7 +376,7 @@ module.exports = {
 
 <script>
 (function() {
-    gitbook.page.hasChanged({"page":{"title":"Migrate Vue 2 Code from Vue CLI 2 to Vue CLI 3","level":"1.18","depth":1,"previous":{"title":"Create a Droplet on Digital Ocean","level":"1.17","depth":1,"path":"create-a-droplet-on-digital-ocean.md","ref":"create-a-droplet-on-digital-ocean.md","articles":[]},"dir":"ltr"},"config":{"gitbook":"*","theme":"default","variables":{},"plugins":["theme-faq","-fontsettings","-sharing"],"pluginsConfig":{"highlight":{},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"theme-faq":{},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"}},"file":{"path":"migrate-vue-2-code-from-vue-cli-2-to-vue-cli-3.md","mtime":"2019-01-19T16:33:48.438Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2019-01-19T16:34:20.999Z"},"basePath":".","book":{"language":""}})
+    gitbook.page.hasChanged({"page":{"title":"Migrate Vue 2 Code from Vue CLI 2 to Vue CLI 3","level":"1.18","depth":1,"previous":{"title":"Create a Droplet on Digital Ocean","level":"1.17","depth":1,"path":"create-a-droplet-on-digital-ocean.md","ref":"create-a-droplet-on-digital-ocean.md","articles":[]},"dir":"ltr"},"config":{"gitbook":"*","theme":"default","variables":{},"plugins":["theme-faq","-fontsettings","-sharing"],"pluginsConfig":{"highlight":{},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"theme-faq":{},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"}},"file":{"path":"migrate-vue-2-code-from-vue-cli-2-to-vue-cli-3.md","mtime":"2019-01-19T16:38:17.079Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2019-01-19T16:38:29.618Z"},"basePath":".","book":{"language":""}})
 })();
 </script>
 <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>

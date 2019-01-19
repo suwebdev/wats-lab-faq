@@ -1,0 +1,305 @@
+
+<!DOCTYPE HTML>
+<html lang="" >
+    <head>
+        <meta charset="UTF-8">
+        <meta content="text/html; charset=utf-8" http-equiv="Content-Type">
+        <title>
+    
+        Install Git Locally · GitBook
+    
+</title>
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="description" content="">
+        <meta name="generator" content="GitBook 3.2.3">
+        
+        
+        
+    <link rel="stylesheet"
+        href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css"
+        integrity="sha384-1q8mTJOASx8j1Au+a5WDVnPi2lkFfwwEAa8hDDdjZlpLegxhjVME1fgjWPGmkzs7"
+        crossorigin="anonymous">
+    <link rel="stylesheet"
+        href="https://maxcdn.bootstrapcdn.com/font-awesome/4.6.0/css/font-awesome.min.css"
+        integrity="sha384-I6JCnqxMbC2DuiHjsoCiLa15NVbKRf8/ooANRLsXD87zD2dVqzlz6Oqjvj470ztk"
+        crossorigin="anonymous">
+    <link rel="stylesheet" href="gitbook/style.css">
+    
+            
+                
+                <link rel="stylesheet" href="gitbook/gitbook-plugin-highlight/website.css">
+                
+            
+                
+                <link rel="stylesheet" href="gitbook/gitbook-plugin-search/search.css">
+                
+            
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+
+        
+    
+    <meta name="HandheldFriendly" content="true"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    <link rel="apple-touch-icon-precomposed" sizes="152x152" href="gitbook/images/apple-touch-icon-precomposed-152.png">
+    <link rel="shortcut icon" href="gitbook/images/favicon.ico" type="image/x-icon">
+
+    </head>
+    <body>
+        
+<nav class="faq-navbar navbar navbar-default">
+    <div class="container">
+        <div class="navbar-header">
+            <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar-menu" aria-expanded="false">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+            </button>
+            <a class="navbar-brand" href=".">
+                Help Center
+            </a>
+        </div>
+
+        <div class="collapse navbar-collapse" id="navbar-menu">
+            
+<ul class="nav navbar-nav navbar-right">
+    <li><a href="wats-faq.pdf" target="_blank">PDF</a></li>
+</ul>
+
+        </div>
+    </div>
+</nav>
+
+<div class="faq-header">
+    <div class="container">
+    <h1>
+        
+            
+                Install Git Locally
+            
+        
+    </h1>
+
+    
+<div id="book-search-input" role="search">
+    <input type="text" placeholder="Have a question? Ask or enter a search term here." />
+</div>
+
+
+    
+    </div>
+</div>
+
+<div class="faq-page-container">
+
+<div id="book-search-results">
+    <div class="search-noresults">
+    
+    
+    
+        <div class="panel panel-default">
+            <div class="panel-body">
+                <ol class="breadcrumb">
+                    <li><a href=".">FAQ</a></li>
+                    
+                        
+                            
+                        
+                            
+                        
+                            
+                        
+                            
+                        
+                            
+                        
+                            
+                        
+                            
+                        
+                            
+                        
+                            
+                        
+                            
+                        
+                            
+                        
+                            
+                        
+                            
+                        
+                            
+                        
+                            
+                        
+                            
+                        
+                            
+                        
+                            
+                        
+                    
+                    <li class="active">Install Git Locally</li>
+                </ol>
+                <div class="faq-page">
+                <p><strong>This is the answer to &quot;How to install Git locally?&quot;</strong></p>
+<p>Before you start this process, create an account on Github at<a href="https://github.com/" target="_blank"> </a><a href="https://github.com/" target="_blank">https://github.com/</a>.</p>
+<h1 id="download-and-install-git">Download and Install Git</h1>
+<p><a href="https://git-scm.com/downloads" target="_blank">https://git-scm.com/downloads</a></p>
+<p>This will install a Folder with a number of file and programs.</p>
+<p>Open a bash window (<code>terminal</code> on Mac or &apos;<code>git bash</code>&apos; on Windows) and type in</p>
+<p><code>git --version</code></p>
+<p>This should return a confirmation that git is installed with a version number.</p>
+<h1 id="connect-to-your-local-workstation-to-github-with-ssh">Connect to your local workstation to Github with SSH</h1>
+<p>Without SSH connection setup you will have to enter your username and password every time you connect to Github, which you will usually have to do during a <code>git push</code>  command.  By sharing your workstation public key with Github, you will not have to provided username and password to connect.</p>
+<p>Open a bash session (<code>terminal</code> on Mac or &apos;<code>git bash</code>&apos; on Windows).  All commands below should be entered into the bash session.</p>
+<p>Check to see if you already have a private key/public key setup by listing any files in the hidden direction .ssh.</p>
+<p><code>ls -al ~/.ssh</code></p>
+<p>If you don&apos;t see any of the following files you will need to create  the key files</p>
+<ul>
+<li>id_rsa.pub</li>
+<li>id_ecdsa.pub</li>
+<li>id_ed25519.pub</li>
+</ul>
+<h1 id="create-public-keyprivate-key-files-if-they-dont-already-exist">Create public key/private key files if they don&apos;t already exist</h1>
+<p><strong>You only need to do this step if you don&apos;t already have public/private key files.</strong></p>
+<p>You ll first create the key files using the email you provided to Github.  This will label the keys with that  email.</p>
+<p><code>ssh-keygen -t rsa -b 4096 -C &quot;your_email@example.com&quot;</code></p>
+<p><code>Generating public/private rsa key pair.</code></p>
+<p>Next you&apos;ll be prompted to enter a file name for your keys and you can just press enter to accept the default.</p>
+<p><code>Enter a file in which to save the key (/c/Users/you/.ssh/id_rsa):[Press enter]</code></p>
+<p>Finally, you&apos;ll be prompted to enter a passphrase.  This is a security feature and you will have to enter this passphrase when you connect to Github, so be sure to remember it.  It can be as simple as a four digit pin number.</p>
+<p><code>Enter passphrase (empty for no passphrase): [Type a passphrase]</code></p>
+<p><code>Enter same passphrase again: [Type passphrase again]</code></p>
+<h1 id="start-ssh-agent-and-add-keys">Start SSH Agent and Add Keys</h1>
+<p>The SSH Agent is a process that will allow you to manage SSH Keys.  You&apos;ll start that process and add your keys with the following command.</p>
+<p><code>eval $(ssh-agent -s)</code></p>
+<p>You will see a response like this indicate that the process is running.</p>
+<p><code>Agent pid 59566</code></p>
+<p>The command below adds your key to the ssh agent.  If the name of your key is different replace <code>id_rsa</code> with the name of your key.</p>
+<p><code>ssh-add ~/.ssh/id_rsa</code></p>
+<h1 id="add-the-ssh-key-to-you-github-acccount">Add the SSH Key to you Github Acccount</h1>
+<p>Now you need to add the public key to your Github account.  This will allow Github to decrypt the data you send it via SSH.</p>
+<p>We start by using the <code>clip</code> command to copy the content of the public key SSH file to your local buffer.</p>
+<p><code>clip &lt; ~/.ssh/id_rsa.pub</code></p>
+<p>If the <code>clip</code> command is not installed you can list the file to the console and then copy the contents into your buffer with ctrl-c/cmd-c.  The <code>cat</code> command will list the file to the console.</p>
+<p><code>cat ~/.ssh/id_rsa.pub</code></p>
+<p>You can also open the file with a text editor and copy the content into the buffer if you have trouble with the <code>clip</code> command.</p>
+<p>Next, go to your Github account online and click on your photo.  This will reveal a dropdown selection where you should select <strong>Settings</strong>.</p>
+<p><img src="assets/settings-github.PNG" alt=""></p>
+<p>The <strong>Setings</strong> menu will appear on the left of the screen and from there you will click on SSH and GPG keys.</p>
+<p><img src="assets/settings-github-2.PNG" alt=""></p>
+<p>After you click on SSH and GPG keys you, you will you click on a button to add a new key.</p>
+<p><img src="assets/ssh-key-add.PNG" alt=""></p>
+<p>Click on the Green button to add the key you have in you buffer.  You should see a form. Enter a Title that help you to remember the workstation you got the key from and then paste the key into the key textarea.  Finally click on the Add SSH key to add it to the list of keys known to Github.</p>
+<p><img src="assets/ssh-key-add-2.PNG" alt=""></p>
+<h1 id="update-user-name-and-email-in-local-git-config">Update User Name and Email in Local Git Config</h1>
+<p>The local Git program maintains configuration data about you that should correspond to your account on github.com.  You&apos;ll want to provide the email and user name that you used for github.com in when you execute the following commands.</p>
+<p><code>git config --global user.name &quot;Mona Lisa&quot;</code></p>
+<p><code>git config --global user.email &quot;email@example.com&quot;</code></p>
+<p>You can execute these commands to verify that you have set up the config variables properly.</p>
+<p><code>git config --global user.name</code></p>
+<p><code>git config --global user.email</code></p>
+<h4 id="making-vs-code-the-default-editor-for-git">Making VS Code the Default Editor for Git</h4>
+<p>You can make Visual Studio Code the default editor for git.  If you ever forget to close the quotes when adding the message during commit (<code>git commit -m&quot;update</code>) you find that git open up the default editor.</p>
+<p>Before running the git config to set VS Code as the default editor, check that the application is in your computer&apos;s path so that it can be found.  You can check this by going to the command line and running.</p>
+<p><code>code --help</code></p>
+<p>If a list of help topic is printed to the screen, the VS Code is in the path.  If not investigate how to get VS Code into the Path.  If in the path execute the following in the command line.</p>
+<p><code>git config --global core.editor &quot;code --wait&quot;</code></p>
+<p>test with this: <code>git config --global -e</code></p>
+<p>If you set up, the command above will open the .gitconfig file which is where git stores its config variable in VS Code.</p>
+<p>See the answer to a question about this on Stack Overflow for more information: Editor For Git]</p>
+<p><a href="https://stackoverflow.com/questions/30024353/how-to-use-visual-studio-code-as-default-editor-for-git" target="_blank">How to Use Visual Studio Code as Default Editor For Git</a></p>
+<h4 id="adding-vs-code-to-your-computer-path">Adding VS Code to your computer Path</h4>
+<h4 id="mac-select">Mac: Select</h4>
+<ul>
+<li>Mac: <strong>Shell Command: Install &apos;Code&apos; command in path</strong>
+from the Command Palette.</li>
+<li>Windows: Make sure you selected
+<strong>Add to PATH</strong>
+during the installation.</li>
+<li>Linux: Make sure you installed Code via our new .deb or .rpm packages.</li>
+</ul>
+<p>Additional References</p>
+<p><a href="https://help.github.com/articles/connecting-to-github-with-ssh/" target="_blank">https://help.github.com/articles/connecting-to-github-with-ssh/</a></p>
+
+                </div>
+            </div>
+        </div>
+
+        
+            
+        
+    
+
+
+    
+    <div class="faq-page-footer">
+        <a href="https://www.gitbook.com" target="_blank">Published with GitBook</a> ·
+        <span>Last edit January 12th 2019</span>
+    </div>
+    
+
+    </div>
+    <div class="search-results">
+        <div class="has-results">
+            
+            <h1 class="search-results-title"><span class='search-results-count'></span> results for "<span class='search-query'></span>"</h1>
+            <ul class="search-results-list"></ul>
+            
+        </div>
+        <div class="no-results">
+            
+            <h1 class="search-results-title">No results matching "<span class='search-query'></span>"</h1>
+            
+        </div>
+    </div>
+</div>
+
+</div>
+
+        
+<script src="gitbook/gitbook.js"></script>
+
+    
+    <script src="gitbook/gitbook-plugin-search/search-engine.js"></script>
+    
+
+    
+    <script src="gitbook/gitbook-plugin-search/search.js"></script>
+    
+
+    
+    <script src="gitbook/gitbook-plugin-lunr/lunr.min.js"></script>
+    
+
+    
+    <script src="gitbook/gitbook-plugin-lunr/search-lunr.js"></script>
+    
+
+<script>
+(function() {
+    gitbook.page.hasChanged({"page":{"title":"Install Git Locally","level":"1.2","depth":1,"next":{"title":"Setup Dev environment with Visual Studio Code","level":"1.3","depth":1,"path":"second-question.md","ref":"second-question.md","articles":[]},"previous":{"title":"How To ...","level":"1.1","depth":1,"path":"README.md","ref":"README.md","articles":[]},"dir":"ltr"},"config":{"gitbook":"*","theme":"default","variables":{},"plugins":["theme-faq","-fontsettings","-sharing"],"pluginsConfig":{"highlight":{},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"theme-faq":{},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"}},"file":{"path":"first-question.md","mtime":"2019-01-12T23:57:45.675Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2019-01-19T16:38:29.618Z"},"basePath":".","book":{"language":""}})
+})();
+</script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
+
+    </body>
+</html>
+
