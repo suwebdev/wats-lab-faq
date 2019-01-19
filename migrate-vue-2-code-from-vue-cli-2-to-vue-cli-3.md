@@ -49,9 +49,38 @@ vue --version
 
 As of this writing, the current version is **3.3.0**, but there is a lot of development taking place with Vue.js and this may not be the version that you get.  Your major version \(the first number should at least be a **3**\).
 
-Migrate Code
+## Migrate Code
 
-The new file structure that CLI 3 is looking for is shown in the picture below.  Your goal will be to migrate your file structure to this new structure.
+The new file structure that CLI 3 is looking for is shown in the picture below.  Your goal will be to migrate your file structure to this new structure.  
+
+![](/assets/vue-cli-3-fs.png)
+
+The changes to look for in this picture are:
+
+* the router code is in a router.js file in the root instead of router/index.js
+* there is a new `views` directory - in CLI 3 the best practice is to put components referenced in the router into the views directory and use the `components` directory for non-view components
+* there is a `.gitkeep` file in the `components` directory and the `views` directory
+* there some new config files - this document will provide the contents for these files, in particular `.babel.config.js`, `postcssrc.js`
+* there a couple of config files that I created specifically to make migration easier to put production build code in the `docs` directory
+* the `package.json` library dependencies has changed significantly and you'll want to replace the entire content of `package.json` with code provided in this document
+
+NOTE: It's possible that the config code provided in this document may change. You can always generate the lates config code by running the new project `create` command to create a new project that will have all of the latest config code.  The project create command will not create the vue.config.js or the aliases.config.js as those are user created and I created them to allow for the use of the `@` symbol to specify `src` and to make the build create distributable files in the `docs` folder so that we can host on `github.io`.
+
+To create a new project in Vue CLI 3 you can run the command below which will create a project called `hello-world`. Notice that the keyword has changed froom `init` to `create`. You should also pick the default babel/eslint. 
+
+```
+vue create hello-world
+```
+
+See this page for instructions on creating a new project and note special instructions for Windows users that are using the `git bash` terminal: [https://cli.vuejs.org/guide/creating-a-project.html\#vue-create](https://cli.vuejs.org/guide/creating-a-project.html#vue-create).
+
+The purposed of these migration instructions is that you shouldn't have to create a new project - you should be able to migrate the code by just adding config files and modifying the file structure.
+
+## Migration Steps
+
+...
+
+
 
 
 
