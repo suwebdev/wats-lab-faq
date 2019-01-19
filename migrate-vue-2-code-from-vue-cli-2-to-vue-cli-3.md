@@ -61,7 +61,7 @@ The changes to look for in this picture are:
 * there is a new `views` directory - in CLI 3 the best practice is to put components referenced in the router into the views directory and use the `components` directory for non-view components
 * there is a `.gitkeep` file in the `components` directory and the `views` directory
 * there some new config files - this document will provide the contents for these files, in particular `.babel.config.js`, `postcssrc.js`
-* there a couple of config files that I created specifically to make migration easier to put production build code in the `docs` directory
+* there a couple of config files that I created specifically to make migration easier to put production build code in the `docs` directory that you'll add `aliases.config.js` and `vue.config.js`
 * the `package.json` library dependencies has changed significantly and you'll want to replace the entire content of `package.json` with code provided in this document
 * the `static` folder has been renamed to `public` and the index.html has moved into the `public` folder
 
@@ -95,7 +95,141 @@ create a `views` directory and move any files in the `components` directory that
 
 add an empty .gitkeep file to the `views` and `components` directory \(this is to keep them around even if empty\)
 
-update links in `router.js` to point to files in the `views` direcory
+update links in `router.js` to point to files in the `views` directory
+
+## Contents of Config Files
+
+### babel.config.js
+
+```
+module.exports = {
+  presets: [
+    '@vue/app'
+  ]
+}
+```
+
+### postcssrc.js
+
+```
+module.exports = {
+  "plugins": {
+    "postcss-import": {},
+    "postcss-url": {},
+    // to edit target browsers: use "browserslist" field in package.json
+    "autoprefixer": {}
+  }
+}
+```
+
+### aliases.config.js
+
+```
+const path = require('path')
+function resolveSrc(_path) {
+  return path.join(__dirname, _path)
+}
+const aliases = {
+  '@': 'src',
+  '@src': 'src'
+}
+module.exports = {
+  webpack: {},
+  jest: {}
+}
+for (const alias in aliases) {
+  module.exports.webpack[alias] = resolveSrc(aliases[alias])
+  module.exports.jest['^' + alias + '/(.*)$'] =
+    '<rootDir>/' + aliases[alias] + '/$1'
+}
+```
+
+### vue.config.js
+
+```
+const path = require('path');
+module.exports = {
+    configureWebpack: {
+        resolve: {
+            //allow for @ or @src alias for src
+            alias: require('./aliases.config').webpack
+        }
+    },
+    chainWebpack: config => {
+        //turn off elint for webpack transpile
+        config.module.rules.delete('eslint');
+    },
+    runtimeCompiler: true,
+    css: {
+        sourceMap: true
+    },
+    publicPath: '',
+    //build for docs folder to enable gh-pages hosting
+    outputDir: './docs/',
+    assetsDir: 'assets'
+}
+```
+
+### package.json
+
+```
+{
+  "name": "hello-world",
+  "version": "0.1.0",
+  "private": true,
+  "scripts": {
+    "serve": "vue-cli-service serve",
+    "build": "vue-cli-service build",
+    "lint": "vue-cli-service lint"
+  },
+  "dependencies": {
+    "axios": "^0.18.0",
+    "vue": "^2.5.21",
+    "vue-router": "^3.0.2",
+    "vue2-animate": "^2.1.0"
+  },
+  "devDependencies": {
+    "@vue/cli-plugin-babel": "^3.3.0",
+    "@vue/cli-plugin-eslint": "^3.3.0",
+    "@vue/cli-service": "^3.3.0",
+    "babel-eslint": "^10.0.1",
+    "eslint": "^5.8.0",
+    "eslint-plugin-vue": "^5.0.0",
+    "vue-template-compiler": "^2.5.21"
+  },
+  "eslintConfig": {
+    "root": true,
+    "env": {
+      "node": true
+    },
+    "extends": [
+      "plugin:vue/essential",
+      "eslint:recommended"
+    ],
+    "rules": {},
+    "parserOptions": {
+      "parser": "babel-eslint"
+    }
+  },
+  "postcss": {
+    "plugins": {
+      "autoprefixer": {}
+    }
+  },
+  "browserslist": [
+    "> 1%",
+    "last 2 versions",
+    "not ie <= 8"
+  ]
+}
+
+```
+
+
+
+
+
+
 
 
 
