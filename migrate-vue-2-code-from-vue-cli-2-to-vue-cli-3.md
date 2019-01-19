@@ -2,9 +2,9 @@ This FAQ answers the question "How to migrate Vue 2 code from Vue CLI 2 to Vue C
 
 # Migrate Vue 2 Code From Vue CLI 2 to Vue CLI 3
 
-Vue.js has rearchitected the way that you build the Vue.js 2 code.  It's important to discern the difference between the way that you code Vue.js and the way that you build Vue.js.  Vue.js released an new version of the CLI \(the command line interface for building Vue.js code in to Vanilla JavaScript and CSS\) in 2017.  The versioning moved from 2 to 3.  
+Vue.js has rearchitected the way that you build the Vue.js 2 code.  It's important to discern the difference between the way that you code Vue.js and the way that you build Vue.js.  Vue.js released an new version of the CLI \(the command line interface for building Vue.js code in to Vanilla JavaScript and CSS\) in 2017.  The versioning moved from 2 to 3.
 
-It is not necessary to upgrade the Vue.js 2 code, but if you want to continue to develop in Vue.js you should upgrade the CLI to version 3.  There are a number of important architecture changes to the way that a project is configured and architected in CLI 3.  It is not necessary to modify your code to make this move.  The changes required involved moving new configuration files and changes to the file structure \(where your code is stored\).  
+It is not necessary to upgrade the Vue.js 2 code, but if you want to continue to develop in Vue.js you should upgrade the CLI to version 3.  There are a number of important architecture changes to the way that a project is configured and architected in CLI 3.  It is not necessary to modify your code to make this move.  The changes required involved moving new configuration files and changes to the file structure \(where your code is stored\).
 
 This document outlines a process to migrate your code repo and add new config files so that it can take advantage of the CLI 3.
 
@@ -51,7 +51,7 @@ As of this writing, the current version is **3.3.0**, but there is a lot of deve
 
 Migrate Code
 
-The new file structure that CLI 3 is looking for is shown in the picture below.
+The new file structure that CLI 3 is looking for is shown in the picture below.  Your goal will be to migrate your file structure to this new structure.  
 
 
 
