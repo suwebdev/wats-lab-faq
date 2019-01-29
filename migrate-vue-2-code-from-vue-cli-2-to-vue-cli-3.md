@@ -65,9 +65,19 @@ npm run build
 
 ## Migrate Code
 
-The new file structure that CLI 3 is looking for is shown in the picture below.  Your goal will be to migrate your file structure to this new structure.
+Branch Existing Code
 
-![](/assets/vue-cli-3-fs.png)
+Do the migrate on a branch and then when it's working properly, merge to the Master branch.  For example \(below\), create a branch named cli3 and check it out to your local machine to work on.
+
+```
+git checkout -b cli3
+```
+
+The new file structure that CLI 3 is looking for is shown in the picture below.  Your goal will be to migrate your file structure to this new structure.  Notice that the config and build directories are gone.  The node\_modules is listed in **.gitignore** so it the name appears faded out in VS Code. There are some new **.js** files used for configuration.
+
+![](/assets/file-structure-cli-3.png)
+
+
 
 The changes to look for in this picture are:
 
