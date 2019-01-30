@@ -207,15 +207,28 @@ node --version
 </code></pre><p>See this page for instructions on creating a new project and note special instructions for Windows users that are using the <code>git bash</code> terminal: <a href="https://cli.vuejs.org/guide/creating-a-project.html#vue-create" target="_blank">https://cli.vuejs.org/guide/creating-a-project.html#vue-create</a>.</p>
 <p>The purposed of these migration instructions is that you shouldn&apos;t have to create a new project - you should be able to migrate the code by just adding config files and modifying the file structure.</p>
 <h2 id="migration-steps">Migration Steps</h2>
-<p>Rename <code>static</code> to <code>public</code></p>
-<p>move <code>index.html</code> into <code>public</code></p>
-<p>create an <code>aliases.config.js</code> file and load it with the contents specified in this document.</p>
+<p>delete <code>config</code> and <code>build</code> directories</p>
+<p>rename <code>static</code> to <code>public</code></p>
+<p>move <code>index.html</code> (and any other static contents) into <code>public</code></p>
+<p>create an <code>aliases.config.js</code> file and load it with the contents specified in this document</p>
+<p>create an <code>babel.config.js</code> file and load it with the contents specified in this document</p>
+<p>create an <code>vue.config.js</code> file and load it with the contents specified in this document</p>
+<p>delete <code>docs</code> directory as it will be recreated when you run the build</p>
 <p>delete <code>package-lock.json</code> file - this file will get automatically recreated when you run <code>npm install</code></p>
 <p>replace the contents of <code>package.json</code> with the code contents specified in this document</p>
 <p>create a <code>router.js</code> file in the root of the project and move the contents of router/index.js into this file</p>
 <p>create a <code>views</code> directory and move any files in the <code>components</code> directory that are reference in the router.js into the <code>views</code> directory</p>
 <p>add an empty .gitkeep file to the <code>views</code> and <code>components</code> directory (this is to keep them around even if empty)</p>
 <p>update links in <code>router.js</code> to point to files in the <code>views</code> directory</p>
+<p>delete <code>node_module</code> and <code>npm install</code> to get new ones</p>
+<p>test code build by running <code>npm run serve</code></p>
+<p>build production code into docs by running <code>npm run build</code></p>
+<p>push branch to github <code>git push -set -upstream origin &lt;branch name&gt;</code></p>
+<p>you should see your branch and master when you run <code>git branch</code></p>
+<p>merge to master by checking out master locally and running merge</p>
+<pre><code>git checkout master
+git merge &lt;branch name&gt;
+</code></pre><p>add/commit/push migrated code to github and test on github.io</p>
 <h2 id="contents-of-config-files">Contents of Config Files</h2>
 <h3 id="babelconfigjs">babel.config.js</h3>
 <pre><code>module.exports = {
@@ -336,7 +349,7 @@ module.exports = {
     
     <div class="faq-page-footer">
         <a href="https://www.gitbook.com" target="_blank">Published with GitBook</a> ·
-        <span>Last edit January 29th 2019</span>
+        <span>Last edit January 30th 2019</span>
     </div>
     
 
@@ -379,7 +392,7 @@ module.exports = {
 
 <script>
 (function() {
-    gitbook.page.hasChanged({"page":{"title":"Migrate Vue 2 Code from Vue CLI 2 to Vue CLI 3","level":"1.18","depth":1,"previous":{"title":"Create a Droplet on Digital Ocean","level":"1.17","depth":1,"path":"create-a-droplet-on-digital-ocean.md","ref":"create-a-droplet-on-digital-ocean.md","articles":[]},"dir":"ltr"},"config":{"gitbook":"*","theme":"default","variables":{},"plugins":["theme-faq","-fontsettings","-sharing"],"pluginsConfig":{"highlight":{},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"theme-faq":{},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"}},"file":{"path":"migrate-vue-2-code-from-vue-cli-2-to-vue-cli-3.md","mtime":"2019-01-29T18:43:17.244Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2019-01-29T18:44:40.928Z"},"basePath":".","book":{"language":""}})
+    gitbook.page.hasChanged({"page":{"title":"Migrate Vue 2 Code from Vue CLI 2 to Vue CLI 3","level":"1.18","depth":1,"previous":{"title":"Create a Droplet on Digital Ocean","level":"1.17","depth":1,"path":"create-a-droplet-on-digital-ocean.md","ref":"create-a-droplet-on-digital-ocean.md","articles":[]},"dir":"ltr"},"config":{"gitbook":"*","theme":"default","variables":{},"plugins":["theme-faq","-fontsettings","-sharing"],"pluginsConfig":{"highlight":{},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"theme-faq":{},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"}},"file":{"path":"migrate-vue-2-code-from-vue-cli-2-to-vue-cli-3.md","mtime":"2019-01-30T18:00:08.920Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2019-01-30T18:00:31.099Z"},"basePath":".","book":{"language":""}})
 })();
 </script>
 <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
