@@ -77,8 +77,6 @@ The new file structure that CLI 3 is looking for is shown in the picture below. 
 
 ![](/assets/file-structure-cli-3.png)
 
-
-
 The changes to look for in this picture are:
 
 * the router code is in a router.js file in the root instead of router/index.js
@@ -103,11 +101,19 @@ The purposed of these migration instructions is that you shouldn't have to creat
 
 ## Migration Steps
 
-Rename `static` to `public`
+delete `config` and `build` directories
 
-move `index.html` into `public`
+rename `static` to `public`
 
-create an `aliases.config.js` file and load it with the contents specified in this document.
+move `index.html` \(and any other static contents\) into `public`
+
+create an `aliases.config.js` file and load it with the contents specified in this document
+
+create an `babel.config.js` file and load it with the contents specified in this document
+
+create an `vue.config.js` file and load it with the contents specified in this document
+
+delete `docs` directory as it will be recreated when you run the build
 
 delete `package-lock.json` file - this file will get automatically recreated when you run `npm install`
 
@@ -120,6 +126,25 @@ create a `views` directory and move any files in the `components` directory that
 add an empty .gitkeep file to the `views` and `components` directory \(this is to keep them around even if empty\)
 
 update links in `router.js` to point to files in the `views` directory
+
+delete `node_module` and `npm install` to get new ones
+
+test code build by running `npm run serve`
+
+build production code into docs by running `npm run build`
+
+push branch to github `git push -set -upstream origin <branch name>`
+
+you should see your branch and master when you run `git branch`
+
+merge to master by checking out master locally and running merge
+
+```
+git checkout master
+git merge <branch name>
+```
+
+add/commit/push migrated code to github and test on github.io
 
 ## Contents of Config Files
 
