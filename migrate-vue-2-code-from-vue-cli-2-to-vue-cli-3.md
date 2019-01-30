@@ -65,7 +65,7 @@ npm run build
 
 ## Migrate Code
 
-Branch Existing Code
+#### Branch Existing Code
 
 Do the migrate on a branch and then when it's working properly, merge to the Master branch.  For example \(below\), create a branch named cli3 and check it out to your local machine to work on.
 
@@ -145,6 +145,12 @@ git merge <branch name>
 ```
 
 add/commit/push migrated code to github and test on github.io
+
+Once you're done merging you can delete the branch.  It's good practice for cleanup.  You'll delete it locally and remotely.
+
+Local:  `git branch -d <branch name>`
+
+Remote: `git push origin --delete <branch-name>`
 
 ## Contents of Config Files
 
