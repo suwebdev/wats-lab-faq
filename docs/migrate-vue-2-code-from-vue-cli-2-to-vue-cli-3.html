@@ -186,7 +186,7 @@ node --version
 </code></pre><p>To run the production build, which should create runnable html/css/js in the docs directory:</p>
 <pre><code>npm run build
 </code></pre><h2 id="migrate-code">Migrate Code</h2>
-<p>Branch Existing Code</p>
+<h4 id="branch-existing-code">Branch Existing Code</h4>
 <p>Do the migrate on a branch and then when it&apos;s working properly, merge to the Master branch.  For example (below), create a branch named cli3 and check it out to your local machine to work on.</p>
 <pre><code>git checkout -b cli3
 </code></pre><p>The new file structure that CLI 3 is looking for is shown in the picture below.  Your goal will be to migrate your file structure to this new structure.  Notice that the config and build directories are gone.  The node_modules is listed in <strong>.gitignore</strong> so it the name appears faded out in VS Code. There are some new <strong>.js</strong> files used for configuration.</p>
@@ -229,6 +229,9 @@ node --version
 <pre><code>git checkout master
 git merge &lt;branch name&gt;
 </code></pre><p>add/commit/push migrated code to github and test on github.io</p>
+<p>Once you&apos;re done merging you can delete the branch.  It&apos;s good practice for cleanup.  You&apos;ll delete it locally and remotely.</p>
+<p>Local:  <code>git branch -d &lt;branch name&gt;</code></p>
+<p>Remote: <code>git push origin --delete &lt;branch-name&gt;</code></p>
 <h2 id="contents-of-config-files">Contents of Config Files</h2>
 <h3 id="babelconfigjs">babel.config.js</h3>
 <pre><code>module.exports = {
@@ -392,7 +395,7 @@ module.exports = {
 
 <script>
 (function() {
-    gitbook.page.hasChanged({"page":{"title":"Migrate Vue 2 Code from Vue CLI 2 to Vue CLI 3","level":"1.18","depth":1,"previous":{"title":"Create a Droplet on Digital Ocean","level":"1.17","depth":1,"path":"create-a-droplet-on-digital-ocean.md","ref":"create-a-droplet-on-digital-ocean.md","articles":[]},"dir":"ltr"},"config":{"gitbook":"*","theme":"default","variables":{},"plugins":["theme-faq","-fontsettings","-sharing"],"pluginsConfig":{"highlight":{},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"theme-faq":{},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"}},"file":{"path":"migrate-vue-2-code-from-vue-cli-2-to-vue-cli-3.md","mtime":"2019-01-30T18:00:08.920Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2019-01-30T18:00:31.099Z"},"basePath":".","book":{"language":""}})
+    gitbook.page.hasChanged({"page":{"title":"Migrate Vue 2 Code from Vue CLI 2 to Vue CLI 3","level":"1.18","depth":1,"previous":{"title":"Create a Droplet on Digital Ocean","level":"1.17","depth":1,"path":"create-a-droplet-on-digital-ocean.md","ref":"create-a-droplet-on-digital-ocean.md","articles":[]},"dir":"ltr"},"config":{"gitbook":"*","theme":"default","variables":{},"plugins":["theme-faq","-fontsettings","-sharing"],"pluginsConfig":{"highlight":{},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"theme-faq":{},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"}},"file":{"path":"migrate-vue-2-code-from-vue-cli-2-to-vue-cli-3.md","mtime":"2019-01-30T20:01:26.887Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2019-01-30T20:01:57.634Z"},"basePath":".","book":{"language":""}})
 })();
 </script>
 <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
