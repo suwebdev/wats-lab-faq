@@ -119,7 +119,7 @@ delete `package-lock.json` file - this file will get automatically recreated whe
 
 replace the contents of `package.json` with the code contents specified in this document
 
-create a `router.js` file in the root of the project and move the contents of router/index.js into this file
+create a `router.js` file in the `src` of the project and move the contents of router/index.js into this file
 
 create a `views` directory and move any files in the `components` directory that are reference in the router.js into the `views` directory
 
