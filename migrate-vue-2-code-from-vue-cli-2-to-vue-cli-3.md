@@ -103,6 +103,8 @@ The purposed of these migration instructions is that you shouldn't have to creat
 
 delete `config` and `build` directories
 
+delete `babel.rc`
+
 rename `static` to `public`
 
 move `index.html` \(and any other static contents\) into `public`
