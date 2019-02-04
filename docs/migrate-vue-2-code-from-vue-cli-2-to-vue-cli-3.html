@@ -1,0 +1,406 @@
+
+<!DOCTYPE HTML>
+<html lang="" >
+    <head>
+        <meta charset="UTF-8">
+        <meta content="text/html; charset=utf-8" http-equiv="Content-Type">
+        <title>
+    
+        Migrate Vue 2 Code from Vue CLI 2 to Vue CLI 3 · GitBook
+    
+</title>
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="description" content="">
+        <meta name="generator" content="GitBook 3.2.3">
+        
+        
+        
+    <link rel="stylesheet"
+        href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css"
+        integrity="sha384-1q8mTJOASx8j1Au+a5WDVnPi2lkFfwwEAa8hDDdjZlpLegxhjVME1fgjWPGmkzs7"
+        crossorigin="anonymous">
+    <link rel="stylesheet"
+        href="https://maxcdn.bootstrapcdn.com/font-awesome/4.6.0/css/font-awesome.min.css"
+        integrity="sha384-I6JCnqxMbC2DuiHjsoCiLa15NVbKRf8/ooANRLsXD87zD2dVqzlz6Oqjvj470ztk"
+        crossorigin="anonymous">
+    <link rel="stylesheet" href="gitbook/style.css">
+    
+            
+                
+                <link rel="stylesheet" href="gitbook/gitbook-plugin-highlight/website.css">
+                
+            
+                
+                <link rel="stylesheet" href="gitbook/gitbook-plugin-search/search.css">
+                
+            
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+
+        
+    
+    <meta name="HandheldFriendly" content="true"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    <link rel="apple-touch-icon-precomposed" sizes="152x152" href="gitbook/images/apple-touch-icon-precomposed-152.png">
+    <link rel="shortcut icon" href="gitbook/images/favicon.ico" type="image/x-icon">
+
+    </head>
+    <body>
+        
+<nav class="faq-navbar navbar navbar-default">
+    <div class="container">
+        <div class="navbar-header">
+            <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar-menu" aria-expanded="false">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+            </button>
+            <a class="navbar-brand" href=".">
+                Help Center
+            </a>
+        </div>
+
+        <div class="collapse navbar-collapse" id="navbar-menu">
+            
+<ul class="nav navbar-nav navbar-right">
+    <li><a href="wats-faq.pdf" target="_blank">PDF</a></li>
+</ul>
+
+        </div>
+    </div>
+</nav>
+
+<div class="faq-header">
+    <div class="container">
+    <h1>
+        
+            
+                Migrate Vue 2 Code from Vue CLI 2 to Vue CLI 3
+            
+        
+    </h1>
+
+    
+<div id="book-search-input" role="search">
+    <input type="text" placeholder="Have a question? Ask or enter a search term here." />
+</div>
+
+
+    
+    </div>
+</div>
+
+<div class="faq-page-container">
+
+<div id="book-search-results">
+    <div class="search-noresults">
+    
+    
+    
+        <div class="panel panel-default">
+            <div class="panel-body">
+                <ol class="breadcrumb">
+                    <li><a href=".">FAQ</a></li>
+                    
+                        
+                            
+                        
+                            
+                        
+                            
+                        
+                            
+                        
+                            
+                        
+                            
+                        
+                            
+                        
+                            
+                        
+                            
+                        
+                            
+                        
+                            
+                        
+                            
+                        
+                            
+                        
+                            
+                        
+                            
+                        
+                            
+                        
+                            
+                        
+                            
+                        
+                    
+                    <li class="active">Migrate Vue 2 Code from Vue CLI 2 to Vue CLI 3</li>
+                </ol>
+                <div class="faq-page">
+                <p>This FAQ answers the question &quot;How to migrate Vue 2 code from Vue CLI 2 to Vue CLI 3?&quot;</p>
+<h1 id="migrate-vue-2-code-from-vue-cli-2-to-vue-cli-3">Migrate Vue 2 Code From Vue CLI 2 to Vue CLI 3</h1>
+<p>Vue.js has rearchitected the way that you build the Vue.js 2 code.  It&apos;s important to discern the difference between the way that you code Vue.js and the way that you build Vue.js.  Vue.js released an new version of the CLI (the command line interface for building Vue.js code in to Vanilla JavaScript and CSS) in 2017.  The versioning moved from 2 to 3.</p>
+<p>It is not necessary to upgrade the Vue.js 2 code, but if you want to continue to develop in Vue.js you should upgrade the CLI to version 3.  There are a number of important architecture changes to the way that a project is configured and architected in CLI 3.  It is not necessary to modify your code to make this move.  The changes required involved moving new configuration files and changes to the file structure (where your code is stored).</p>
+<p>This document outlines a process to migrate your code repo and add new config files so that it can take advantage of the CLI 3.</p>
+<h2 id="upgrade-node">Upgrade Node</h2>
+<p>The first step should be to make sure you&apos;re using the latest version of node and npm.  This can be done by executing the global install command. This command will update node and npm.</p>
+<p><code>npm install -g node</code></p>
+<p>If you&apos;re on a Mac, depending on how you installed node, you made need to use the <code>sudo</code> command for permission to do this upgrade.</p>
+<p><code>sudo npm install -g node</code></p>
+<p>Its always a good idea to check your upgrade by checking versions.</p>
+<pre><code>npm --version
+node --version
+</code></pre><h2 id="upgrade-vue-cli">Upgrade Vue CLI</h2>
+<p>To upgrade Vue CLI you can follow instructions on this page: <a href="https://cli.vuejs.org/guide/installation.html" target="_blank">https://cli.vuejs.org/guide/installation.html</a></p>
+<p>If you have Vue 2 CLI installed you need to uninstall it.</p>
+<pre><code>npm uninstall vue-cli -g
+</code></pre><p>The command to install CLI 3 is</p>
+<pre><code>npm install -g @vue/cli
+</code></pre><p>Then verify the version</p>
+<pre><code>vue --version
+</code></pre><p>As of this writing, the current version is <strong>3.3.0</strong>, but there is a lot of development taking place with Vue.js and this may not be the version that you get.  Your major version (the first number should at least be a <strong>3</strong>).</p>
+<h2 id="build-and-dev">Build and Dev</h2>
+<p>CLI 3 provides a production and dev build just as CLI 2 did but the command to run the dev build and server has changed. To run the dev build use the following command:</p>
+<pre><code>npm run serve
+</code></pre><p>To run the production build, which should create runnable html/css/js in the docs directory:</p>
+<pre><code>npm run build
+</code></pre><h2 id="migrate-code">Migrate Code</h2>
+<h4 id="branch-existing-code">Branch Existing Code</h4>
+<p>Do the migrate on a branch and then when it&apos;s working properly, merge to the Master branch.  For example (below), create a branch named cli3 and check it out to your local machine to work on.</p>
+<pre><code>git checkout -b cli3
+</code></pre><p>The new file structure that CLI 3 is looking for is shown in the picture below.  Your goal will be to migrate your file structure to this new structure.  Notice that the config and build directories are gone.  The node_modules is listed in <strong>.gitignore</strong> so it the name appears faded out in VS Code. There are some new <strong>.js</strong> files used for configuration.</p>
+<p><img src="assets/file-structure-cli-3.png" alt=""></p>
+<p>The changes to look for in this picture are:</p>
+<ul>
+<li>the router code is in a router.js file in the root instead of router/index.js</li>
+<li>there is a new <code>views</code> directory - in CLI 3 the best practice is to put components referenced in the router into the views directory and use the <code>components</code> directory for non-view components</li>
+<li>there is a <code>.gitkeep</code> file in the <code>components</code> directory and the <code>views</code> directory</li>
+<li>there some new config files - this document will provide the contents for these files, in particular <code>.babel.config.js</code>, <code>postcssrc.js</code></li>
+<li>there a couple of config files that I created specifically to make migration easier to put production build code in the <code>docs</code> directory that you&apos;ll add <code>aliases.config.js</code> and <code>vue.config.js</code></li>
+<li>the <code>package.json</code> library dependencies has changed significantly and you&apos;ll want to replace the entire content of <code>package.json</code> with code provided in this document</li>
+<li>the <code>static</code> folder has been renamed to <code>public</code> and the index.html has moved into the <code>public</code> folder</li>
+</ul>
+<p>NOTE: It&apos;s possible that the config code provided in this document may change. You can always generate the lates config code by running the new project <code>create</code> command to create a new project that will have all of the latest config code.  The project create command will not create the vue.config.js or the aliases.config.js as those are user created and I created them to allow for the use of the <code>@</code> symbol to specify <code>src</code> and to make the build create distributable files in the <code>docs</code> folder so that we can host on <code>github.io</code>.</p>
+<p>To create a new project in Vue CLI 3 you can run the command below which will create a project called <code>hello-world</code>. Notice that the keyword has changed froom <code>init</code> to <code>create</code>. You should also pick the default babel/eslint.</p>
+<pre><code>vue create hello-world
+</code></pre><p>See this page for instructions on creating a new project and note special instructions for Windows users that are using the <code>git bash</code> terminal: <a href="https://cli.vuejs.org/guide/creating-a-project.html#vue-create" target="_blank">https://cli.vuejs.org/guide/creating-a-project.html#vue-create</a>.</p>
+<p>The purposed of these migration instructions is that you shouldn&apos;t have to create a new project - you should be able to migrate the code by just adding config files and modifying the file structure.</p>
+<h2 id="migration-steps">Migration Steps</h2>
+<p>delete <code>config</code> and <code>build</code> directories</p>
+<p>delete <code>babel.rc</code></p>
+<p>rename <code>static</code> to <code>public</code></p>
+<p>move <code>index.html</code> (and any other static contents) into <code>public</code></p>
+<p>create an <code>aliases.config.js</code> file and load it with the contents specified in this document</p>
+<p>create an <code>babel.config.js</code> file and load it with the contents specified in this document</p>
+<p>create an <code>vue.config.js</code> file and load it with the contents specified in this document</p>
+<p>delete <code>docs</code> directory as it will be recreated when you run the build</p>
+<p>delete <code>package-lock.json</code> file - this file will get automatically recreated when you run <code>npm install</code></p>
+<p>replace the contents of <code>package.json</code> with the code contents specified in this document</p>
+<p>create a <code>router.js</code> file in the <code>src</code> of the project and move the contents of router/index.js into this file</p>
+<p>create a <code>views</code> directory and move any files in the <code>components</code> directory that are reference in the router.js into the <code>views</code> directory</p>
+<p>add an empty .gitkeep file to the <code>views</code> and <code>components</code> directory (this is to keep them around even if empty)</p>
+<p>update links in <code>router.js</code> to point to files in the <code>views</code> directory</p>
+<p>delete <code>node_module</code> and <code>npm install</code> to get new ones</p>
+<p>test code build by running <code>npm run serve</code></p>
+<p>build production code into docs by running <code>npm run build</code></p>
+<p>push branch to github <code>git push -set -upstream origin &lt;branch name&gt;</code></p>
+<p>you should see your branch and master when you run <code>git branch</code></p>
+<p>merge to master by checking out master locally and running merge</p>
+<pre><code>git checkout master
+git merge &lt;branch name&gt;
+</code></pre><p>add/commit/push migrated code to github and test on github.io</p>
+<p>Once you&apos;re done merging you can delete the branch.  It&apos;s good practice for cleanup.  You&apos;ll delete it locally and remotely.</p>
+<p>Local:  <code>git branch -d &lt;branch name&gt;</code></p>
+<p>Remote: <code>git push origin --delete &lt;branch-name&gt;</code></p>
+<h2 id="contents-of-config-files">Contents of Config Files</h2>
+<h3 id="babelconfigjs">babel.config.js</h3>
+<pre><code>module.exports = {
+  presets: [
+    &apos;@vue/app&apos;
+  ]
+}
+</code></pre><h3 id="postcssrcjs">postcssrc.js</h3>
+<pre><code>module.exports = {
+  &quot;plugins&quot;: {
+    &quot;postcss-import&quot;: {},
+    &quot;postcss-url&quot;: {},
+    // to edit target browsers: use &quot;browserslist&quot; field in package.json
+    &quot;autoprefixer&quot;: {}
+  }
+}
+</code></pre><h3 id="aliasesconfigjs">aliases.config.js</h3>
+<pre><code>const path = require(&apos;path&apos;)
+function resolveSrc(_path) {
+  return path.join(__dirname, _path)
+}
+const aliases = {
+  &apos;@&apos;: &apos;src&apos;,
+  &apos;@src&apos;: &apos;src&apos;
+}
+module.exports = {
+  webpack: {},
+  jest: {}
+}
+for (const alias in aliases) {
+  module.exports.webpack[alias] = resolveSrc(aliases[alias])
+  module.exports.jest[&apos;^&apos; + alias + &apos;/(.*)$&apos;] =
+    &apos;&lt;rootDir&gt;/&apos; + aliases[alias] + &apos;/$1&apos;
+}
+</code></pre><h3 id="vueconfigjs">vue.config.js</h3>
+<pre><code>const path = require(&apos;path&apos;);
+module.exports = {
+    configureWebpack: {
+        resolve: {
+            //allow for @ or @src alias for src
+            alias: require(&apos;./aliases.config&apos;).webpack
+        }
+    },
+    chainWebpack: config =&gt; {
+        //turn off elint for webpack transpile
+        config.module.rules.delete(&apos;eslint&apos;);
+    },
+    runtimeCompiler: true,
+    css: {
+        sourceMap: true
+    },
+    publicPath: &apos;&apos;,
+    //build for docs folder to enable gh-pages hosting
+    outputDir: &apos;./docs/&apos;,
+    assetsDir: &apos;assets&apos;
+}
+</code></pre><h3 id="packagejson">package.json</h3>
+<pre><code>{
+  &quot;name&quot;: &quot;hello-world&quot;,
+  &quot;version&quot;: &quot;0.1.0&quot;,
+  &quot;private&quot;: true,
+  &quot;scripts&quot;: {
+    &quot;serve&quot;: &quot;vue-cli-service serve&quot;,
+    &quot;build&quot;: &quot;vue-cli-service build&quot;,
+    &quot;lint&quot;: &quot;vue-cli-service lint&quot;
+  },
+  &quot;dependencies&quot;: {
+    &quot;axios&quot;: &quot;^0.18.0&quot;,
+    &quot;vue&quot;: &quot;^2.5.21&quot;,
+    &quot;vue-router&quot;: &quot;^3.0.2&quot;,
+    &quot;vue2-animate&quot;: &quot;^2.1.0&quot;
+  },
+  &quot;devDependencies&quot;: {
+    &quot;@vue/cli-plugin-babel&quot;: &quot;^3.3.0&quot;,
+    &quot;@vue/cli-plugin-eslint&quot;: &quot;^3.3.0&quot;,
+    &quot;@vue/cli-service&quot;: &quot;^3.3.0&quot;,
+    &quot;babel-eslint&quot;: &quot;^10.0.1&quot;,
+    &quot;eslint&quot;: &quot;^5.8.0&quot;,
+    &quot;eslint-plugin-vue&quot;: &quot;^5.0.0&quot;,
+    &quot;vue-template-compiler&quot;: &quot;^2.5.21&quot;
+  },
+  &quot;eslintConfig&quot;: {
+    &quot;root&quot;: true,
+    &quot;env&quot;: {
+      &quot;node&quot;: true
+    },
+    &quot;extends&quot;: [
+      &quot;plugin:vue/essential&quot;,
+      &quot;eslint:recommended&quot;
+    ],
+    &quot;rules&quot;: {},
+    &quot;parserOptions&quot;: {
+      &quot;parser&quot;: &quot;babel-eslint&quot;
+    }
+  },
+  &quot;postcss&quot;: {
+    &quot;plugins&quot;: {
+      &quot;autoprefixer&quot;: {}
+    }
+  },
+  &quot;browserslist&quot;: [
+    &quot;&gt; 1%&quot;,
+    &quot;last 2 versions&quot;,
+    &quot;not ie &lt;= 8&quot;
+  ]
+}
+</code></pre>
+                </div>
+            </div>
+        </div>
+
+        
+            
+        
+    
+
+
+    
+    <div class="faq-page-footer">
+        <a href="https://www.gitbook.com" target="_blank">Published with GitBook</a> ·
+        <span>Last edit February 1st 2019</span>
+    </div>
+    
+
+    </div>
+    <div class="search-results">
+        <div class="has-results">
+            
+            <h1 class="search-results-title"><span class='search-results-count'></span> results for "<span class='search-query'></span>"</h1>
+            <ul class="search-results-list"></ul>
+            
+        </div>
+        <div class="no-results">
+            
+            <h1 class="search-results-title">No results matching "<span class='search-query'></span>"</h1>
+            
+        </div>
+    </div>
+</div>
+
+</div>
+
+        
+<script src="gitbook/gitbook.js"></script>
+
+    
+    <script src="gitbook/gitbook-plugin-search/search-engine.js"></script>
+    
+
+    
+    <script src="gitbook/gitbook-plugin-search/search.js"></script>
+    
+
+    
+    <script src="gitbook/gitbook-plugin-lunr/lunr.min.js"></script>
+    
+
+    
+    <script src="gitbook/gitbook-plugin-lunr/search-lunr.js"></script>
+    
+
+<script>
+(function() {
+    gitbook.page.hasChanged({"page":{"title":"Migrate Vue 2 Code from Vue CLI 2 to Vue CLI 3","level":"1.18","depth":1,"previous":{"title":"Create a Droplet on Digital Ocean","level":"1.17","depth":1,"path":"create-a-droplet-on-digital-ocean.md","ref":"create-a-droplet-on-digital-ocean.md","articles":[]},"dir":"ltr"},"config":{"gitbook":"*","theme":"default","variables":{},"plugins":["theme-faq","-fontsettings","-sharing"],"pluginsConfig":{"highlight":{},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"theme-faq":{},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"}},"file":{"path":"migrate-vue-2-code-from-vue-cli-2-to-vue-cli-3.md","mtime":"2019-02-02T02:48:31.598Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2019-02-04T18:19:31.575Z"},"basePath":".","book":{"language":""}})
+})();
+</script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
+
+    </body>
+</html>
+
