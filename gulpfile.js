@@ -32,3 +32,8 @@ gulp.task('build', function (callback) {
 gulp.task('default', gulp.series('clean', 'build', 'copy', function (done) {
   done();
 }));
+
+/* notes on creating pdf
+gitbook pdf ./ ./wats-faq.pdf
+export PATH=$PATH:/Applications/calibre.app/Contents/MacOS
+*/
