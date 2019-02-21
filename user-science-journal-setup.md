@@ -6,7 +6,7 @@ You can use any online static website for your User Science Journal.  These inst
 
 ## Download the User Science Blog Repository
 
-You can download the User Science Blog repository from the **suwebdev** account on github. There is no need to fork this repo as you don't need the history and you'll be creating a repo into your own account to push it to.
+You can download the [User Science Blog repository](https://github.com/suwebdev/user-science-blog) from the **suwebdev** account on github. There is no need to fork this repo as you don't need the history and you'll be creating a repo into your own account to push it to.
 
 ![](/assets/Screen Shot 2019-02-21 at 8.59.19 AM.png)
 
@@ -42,25 +42,25 @@ git push -u origin master
 
 Once your repo is in github, you  can set up github.io service and then you'll share the link to a postX.html file each week for your home assignment.
 
-The link to the user science journal just created is: _**https://www.beckypeltz.me/user-science-journal/**_
+The link to the user science journal just created is: [https://www.beckypeltz.me/user-science-journal/](https://www.beckypeltz.me/user-science-journal/)
 
 ## Add Google Analytics to Each Page in the Journal
 
-Get a [Google account ](https://support.google.com/mail/answer/56256?hl=en)if you don't already have one.  
+Get a [Google account ](https://support.google.com/mail/answer/56256?hl=en)if you don't already have one.
 
 Start using Google Analytics from the marketing platform: [https://marketingplatform.google.com/about/analytics/](https://marketingplatform.google.com/about/analytics/)
 
-The first time you made need to press on the Start for Free button.  
+The first time you made need to press on the Start for Free button.
 
 ![](/assets/Screen Shot 2019-02-21 at 9.24.18 AM.png)
 
-Once signed in, you'll go to the home page.  The home page below is for an account that is already tracking properties, so it may not look exactly like this.  
+Once signed in, you'll go to the home page.  The home page below is for an account that is already tracking properties, so it may not look exactly like this.
 
 ![](/assets/Screen Shot 2019-02-21 at 9.26.27 AM.png)
 
 ### Get a Google Analytics Tracking Number for Your Site
 
-Click on the Admin button \(lower left with Gear icon\). 
+Click on the Admin button \(lower left with Gear icon\).
 
 Click on the Create Account button.
 
@@ -74,9 +74,9 @@ At the bottom of the Create Property form click on Get Tracking Code. This will 
 
 ![](/assets/Screen Shot 2019-02-21 at 9.37.37 AM.png)
 
-The Tracking Code is a string that links your web page to google analytics data.  The Tracking Code is added to the page by inserting some JavaScript on to each page your want tracked.  You'll copy the code from the Tracking Code page into your butter and past it into the web page as the first item under the &lt;HEAD&gt; tag.  The tracking code is in the positions labeled as yellow rectangles below.  
+The Tracking Code is a string that links your web page to google analytics data.  The Tracking Code is added to the page by inserting some JavaScript on to each page your want tracked.  You'll copy the code from the Tracking Code page into your butter and past it into the web page as the first item under the &lt;HEAD&gt; tag.  The tracking code is in the positions labeled as yellow rectangles below.
 
-![](/assets/tracking-code-script.png) 
+![](/assets/tracking-code-script.png)
 
 You can see what this looks like in code below.  You'll need to **add this to every web page that you want to get tracked by GA**.
 
@@ -89,6 +89,4 @@ Now when you go to your Home page on Google Analytics, it will looks like this:
 ![](/assets/Screen Shot 2019-02-21 at 9.50.20 AM.png)
 
 Reference for Setup: [https://support.google.com/analytics/answer/1008015?hl=en](https://support.google.com/analytics/answer/1008015?hl=en)
-
-
 
