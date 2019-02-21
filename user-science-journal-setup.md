@@ -82,6 +82,14 @@ You can see what this looks like in code below.  You'll need to **add this to ev
 
 ![](/assets/Screen Shot 2019-02-21 at 9.46.05 AM.png)
 
+## Add Demographics to Data Collection
+
+Click on the enable button to enable demographic tracking.  The learn more button takes you to a page where you are informed that you must add language to your privacy policy in order to collect this data.  We have added this language to the about page in the User Science Journal repo. 
+
+![](/assets/Screen Shot 2019-02-21 at 10.41.01 AM.png)
+
+![](/assets/Screen Shot 2019-02-21 at 10.41.58 AM.png)
+
 ## Look at Home Page on Google Analytics
 
 Now when you go to your Home page on Google Analytics, it will looks like this:
