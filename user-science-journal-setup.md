@@ -6,9 +6,9 @@ You can use any online static website for your User Science Journal.  These inst
 
 ## Download the User Science Blog Repository
 
-You can download the [User Science Blog repository](https://github.com/suwebdev/user-science-blog) from the **suwebdev** account on github. There is no need to fork this repo as you don't need the history and you'll be creating a repo into your own account to push it to.
+You can download the [User Science Journal repository](https://github.com/suwebdev/user-science-journal) from the **suwebdev** account on github. There is no need to fork this repo as you don't need the history and you'll be creating a repo into your own account to push it to.
 
-![](/assets/Screen Shot 2019-02-21 at 8.59.19 AM.png)
+![](/assets/Screen Shot 2019-02-21 at 10.10.41 AM.png)
 
 Once this zip file is downloaded, you can unzip it and copy it into your project directory. Open the the directory on your IDE and then preview in your browser.  You'll be adding blog post content to the  **postX.html **files in the repo.  At a minimum you'll need to do some customization such has changing **Jane Student** to your name, but you're encourage to really personalize this repo.  This means you can add images and CSS as you wish.
 
