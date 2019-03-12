@@ -1,4 +1,4 @@
-**This is the answer to "How to create gh-pages branch for Github hosting?"**
+**This is the answer to "How to configure a repo for Github hosting?"**
 
 # Configure Repo for Github hosting
 
@@ -31,8 +31,4 @@ The dot \(.\) indicates all files in this folder and below.
 `git commit -m"my comment message"`
 
 `git push`
-
-
-
-
 
