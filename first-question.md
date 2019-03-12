@@ -116,7 +116,7 @@ Before running the git config to set VS Code as the default editor, check that t
 
 `code --help`
 
-If a list of help topic is printed to the screen, the VS Code is in the path.  If not investigate how to get VS Code into the Path.  If in the path execute the following in the command line.
+If a list of help topic is printed to the screen, the VS Code is in the path.  If not investigate how to get VS Code into the Path \([Mac](https://code.visualstudio.com/docs/setup/mac) and [Windows](https://code.visualstudio.com/docs/setup/windows)\).  If in the path execute the following in the command line.
 
 `git config --global core.editor "code --wait"`
 
@@ -138,8 +138,6 @@ See the answer to a question about this on Stack Overflow for more information: 
   **Add to PATH**
   during the installation.
 * Linux: Make sure you installed Code via our new .deb or .rpm packages.
-
-
 
 Additional References
 
