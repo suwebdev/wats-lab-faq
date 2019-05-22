@@ -88,7 +88,9 @@ Click on the enable button to enable demographic tracking.  The learn more butto
 
 You can see that demographics has been switched on in the image below.![](/assets/analytics-demographics.png)
 
+Read this notice about collecting demographics. Usually you would update your privacy policy.  You can add a note on your about page indicating that you are collecting demographic information.  Sometimes the demographic reports will not show any information and this is due to the fact that you have to acquire a lot of data before demographics are made available.
 
+![](/assets/demographic-blurb.png)
 
 ## Look at Home Page on Google Analytics
 
