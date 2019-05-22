@@ -86,11 +86,7 @@ You can see what this looks like in code below.  You'll need to **add this to ev
 
 Click on the enable button to enable demographic tracking.  The learn more button takes you to a [page](https://support.google.com/analytics/answer/2700409?hl=en&utm_id=ad) where you are informed that you must add language to your privacy policy in order to collect this data.  We have added this language to the about page in the User Science Journal repo.
 
-![](/assets/Screen Shot 2019-02-21 at 10.41.01 AM.png)
-
-Once enabled you'll see the following confirmation.
-
-![](/assets/Screen Shot 2019-02-21 at 10.41.58 AM.png)
+You can see that demographics has been switched on in the image below.![](/assets/analytics-demographics.png)
 
 
 
