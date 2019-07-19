@@ -6,7 +6,7 @@
         <meta content="text/html; charset=utf-8" http-equiv="Content-Type">
         <title>
     
-        Create new Github repo from existing local file folder · GitBook
+        Add existing local folder to github.com repo that contains files · GitBook
     
 </title>
         <meta http-equiv="X-UA-Compatible" content="IE=edge" />
@@ -90,7 +90,7 @@
     <h1>
         
             
-                Create new Github repo from existing local file folder
+                Add existing local folder to github.com repo that contains files
             
         
     </h1>
@@ -157,7 +157,7 @@
                             
                         
                     
-                    <li class="active">Create new Github repo from existing local file folder</li>
+                    <li class="active">Add existing local folder to github.com repo that contains files</li>
                 </ol>
                 <div class="faq-page">
                 <p><strong>This is the answer to &quot;How to install create new Github repo from existing file folder?&quot;</strong></p>
@@ -167,19 +167,29 @@
 <p>Go to your github account <a href="https://github.com" target="_blank">https://github.com/&lt;account name&gt;</a></p>
 <p>In the upper-right corner of any page, click the &quot;+&quot; icon and choose to &apos;New Repository&apos;</p>
 <p>Fill out the new repository name and give it a description in the New Repository form</p>
-<p>Make note of the name of the repo</p>
+<p>Make note of the name of the repo  </p>
 <p><strong>Local</strong>:</p>
 <p>On Mac, open terminal and on Windows open Git Bash.</p>
-<p>Follow instructions below substituting your account name and the repo you created above in the command.</p>
-<p><code>cd</code> to the root of the folder you want to add to github</p>
-<p><code>git init</code></p>
-<pre><code>git remote add origin git@github.com:&lt;account name&gt;/&lt;exisisting remote repo&gt;.git
-</code></pre><pre><code>git push -u origin master
-</code></pre><p><code>git add .</code></p>
-<p><code>git commit -m&quot;first commit&quot;</code></p>
-<p>If you added a license or Readme while setting up the new repository you will need to &quot;pull&quot; before &quot;pushing&quot;</p>
-<p><code>git pull origin master --allow-unrelated-histories</code></p>
-<p><code>git push --set-upstream origin master</code></p>
+<p>Follow instructions below substituting your account name and the repo you created above in the command.
+<code>cd</code> to the root of the folder you want to add to github</p>
+<p>Now follow these command.  You may or may not have to merge depending on if your local project has overwritten any of the file in the github.com repo.  </p>
+<pre><code class="lang-bash">git init
+git add .
+git commit -m<span class="hljs-string">&quot;adding local&quot;</span>
+<span class="hljs-comment"># fill in the reponame with whatever you named the new repo on github.com</span>
+<span class="hljs-comment"># fill in the account with your github account name</span>
+<span class="hljs-comment"># remove the mustaches</span>
+git remote add origin git@github.com:{{account}}/{{reponame}.git
+git pull origin master --allow-unrelated-histories
+<span class="hljs-comment"># merge - if you have 2 files with different data you&apos;ll have to merge by removing</span>
+<span class="hljs-comment"># any &lt;&lt;&lt; or &gt;&gt;&gt; lines from files that need merging</span>
+git add .
+git commit -m<span class="hljs-string">&quot;merge&quot;</span>
+git push --set-upstream origin master
+git push --set-upstream origin master
+git pull
+<span class="hljs-comment"># should be up to date</span>
+</code></pre>
 
                 </div>
             </div>
@@ -194,7 +204,7 @@
     
     <div class="faq-page-footer">
         <a href="https://www.gitbook.com" target="_blank">Published with GitBook</a> ·
-        <span>Last edit January 30th 2019</span>
+        <span>Last edit July 18th 2019</span>
     </div>
     
 
@@ -237,7 +247,7 @@
 
 <script>
 (function() {
-    gitbook.page.hasChanged({"page":{"title":"Create new Github repo from existing local file folder","level":"1.4","depth":1,"next":{"title":"Configure Repo for Github hosting","level":"1.5","depth":1,"path":"create-gh-pages-branch-to-host-html-from-github.md","ref":"create-gh-pages-branch-to-host-html-from-github.md","articles":[]},"previous":{"title":"Setup Dev environment with Visual Studio Code","level":"1.3","depth":1,"path":"second-question.md","ref":"second-question.md","articles":[]},"dir":"ltr"},"config":{"gitbook":"*","theme":"default","variables":{},"plugins":["theme-faq","-fontsettings","-sharing"],"pluginsConfig":{"highlight":{},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"theme-faq":{},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"}},"file":{"path":"add-existing-local-folder-to-github.md","mtime":"2019-01-30T18:01:27.932Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2019-05-22T02:42:09.464Z"},"basePath":".","book":{"language":""}})
+    gitbook.page.hasChanged({"page":{"title":"Add existing local folder to github.com repo that contains files","level":"1.4","depth":1,"next":{"title":"Configure Repo for Github hosting","level":"1.5","depth":1,"path":"create-gh-pages-branch-to-host-html-from-github.md","ref":"create-gh-pages-branch-to-host-html-from-github.md","articles":[]},"previous":{"title":"Setup Dev environment with Visual Studio Code","level":"1.3","depth":1,"path":"second-question.md","ref":"second-question.md","articles":[]},"dir":"ltr"},"config":{"gitbook":"*","theme":"default","variables":{},"plugins":["theme-faq","-fontsettings","-sharing"],"pluginsConfig":{"highlight":{},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"theme-faq":{},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"}},"file":{"path":"add-existing-local-folder-to-github.md","mtime":"2019-07-19T00:16:32.484Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2019-07-19T00:19:29.992Z"},"basePath":".","book":{"language":""}})
 })();
 </script>
 <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>

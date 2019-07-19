@@ -3,7 +3,7 @@
 * [How To ...](README.md)
 * [Install Git Locally](first-question.md)
 * [Setup Dev environment with Visual Studio Code](second-question.md)
-* [Create new Github repo from existing local file folder](add-existing-local-folder-to-github.md)
+* [Add existing local folder to github.com repo that contains files](add-existing-local-folder-to-github.md)
 * [Configure Repo for Github hosting](create-gh-pages-branch-to-host-html-from-github.md)
 * [Use the Visual Studio Code Terminal](use-the-visual-studio-code-terminal.md)
 * [Kill a process based on port number](kill-a-process-based-on-port-number.md)

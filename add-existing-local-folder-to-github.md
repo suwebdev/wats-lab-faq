@@ -12,33 +12,35 @@ In the upper-right corner of any page, click the "+" icon and choose to 'New Rep
 
 Fill out the new repository name and give it a description in the New Repository form
 
-Make note of the name of the repo
+Make note of the name of the repo  
 
 **Local**:
 
 On Mac, open terminal and on Windows open Git Bash.
 
 Follow instructions below substituting your account name and the repo you created above in the command.
-
 `cd` to the root of the folder you want to add to github
 
-`git init`
+Now follow these command.  You may or may not have to merge depending on if your local project has overwritten any of the file in the github.com repo.  
+
+```bash
+git init
+git add .
+git commit -m"adding local"
+# fill in the reponame with whatever you named the new repo on github.com
+# fill in the account with your github account name
+# remove the mustaches
+git remote add origin git@github.com:{{account}}/{{reponame}.git
+git pull origin master --allow-unrelated-histories
+# merge - if you have 2 files with different data you'll have to merge by removing
+# any <<< or >>> lines from files that need merging
+git add .
+git commit -m"merge"
+git push --set-upstream origin master
+git push --set-upstream origin master
+git pull
+# should be up to date
+
 
 ```
-git remote add origin git@github.com:<account name>/<exisisting remote repo>.git
-```
-
-```
-git push -u origin master
-```
-
-`git add .`
-
-`git commit -m"first commit"`
-
-If you added a license or Readme while setting up the new repository you will need to "pull" before "pushing"
-
-`git pull origin master --allow-unrelated-histories`
-
-`git push --set-upstream origin master`
 
